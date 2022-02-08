@@ -10,9 +10,9 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { Frame } from '../frontend/core/frame/Frame';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../frontend/shared/assets/css/animate.css';
-import '../frontend/shared/assets/css/style.css';
-import '../frontend/shared/assets/css/responsive.css';
+import '../frontend/shared/ui/css/animate.css';
+import '../frontend/shared/ui/css/style.css';
+import '../frontend/shared/ui/css/responsive.css';
 
 library.add(
   faBars,
