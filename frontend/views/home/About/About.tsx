@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import IQImage from './assets/iq-img.jpg';
-import TradingExchanges from './assets/svg/money-exchange.svg';
-import CryptoWallets from './assets/svg/wallet.svg';
-import PortfolioTrackers from './assets/svg/analytics.svg';
+import IQImage from './assets/metaverse-giant.png';
+import GamerHubIcon from './assets/prompt-logo.png';
+import GamerGrowIcon from './assets/prompt-circle.png';
+import GamerPlayIcon from './assets/prompt-triangle.png';
 
 const About: NextPage = () => {
   return (
@@ -12,16 +12,11 @@ const About: NextPage = () => {
         <div className="row justify-content-xl-end justify-content-lg-end justify-content-sm-center">
           <div className="col-xl-5 col-lg-6 col-sm-10 col-md-7 d-xl-flex d-lg-flex d-block align-items-center">
             <div className="part-text">
-              <h2>Use IQN easily in Misco</h2>
+              <h2>Reinventing The Crypto Gaming Experience</h2>
+              <p>Access all games across all blockchains in one place.</p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi iusto, fuga consequuntur laudantium porro suscipit
-                minima, delectus commodi possimus animi nesciunt neque hic
-                fugiat. Alias sequi consectetur voluptate voluptatum quaerat.
-              </p>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam reprehenderit molestiae in, illo similique.
+                The game aggregator framework is backed by a cross-chain
+                stablecoin protocol governed by the community.
               </p>
               <a href="#0" className="def-btn">
                 play now
@@ -31,30 +26,6 @@ const About: NextPage = () => {
           <div className="col-xl-4 col-lg-5 col-sm-10 col-md-5 offset-xl-1 offset-lg-1 offset-0">
             <div className="part-img">
               <Image src={IQImage} alt="" />
-              <div className="part-video">
-                <a
-                  href="#"
-                  data-video-id="5hhlW_SYJBA"
-                  className="js-video-button play-button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fal"
-                    data-icon="play"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    className="svg-inline--fa fa-play fa-w-14 fa-fw fa-2x"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6zm-16.2 55.1l-352 208C45.6 483.9 32 476.6 32 464V47.9c0-16.3 16.4-18.4 24.1-13.8l352 208.1c10.5 6.2 10.5 21.4.1 27.6z"
-                      className=""
-                    ></path>
-                  </svg>
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -64,39 +35,39 @@ const About: NextPage = () => {
               <div className="single-feature">
                 <Image
                   className="icon"
-                  src={TradingExchanges}
+                  src={GamerHubIcon}
                   alt=""
                   width={60}
-                  height={60}
+                  height={36}
                 />
-                <h3 className="title">Trading Exchanges</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h3 className="title">GamerHub</h3>
+                <p>Crypto games with DeFi and NFT features.</p>
               </div>
             </div>
             <div className="col-xl-4 col-lg-4 col-sm-10 col-md-6">
               <div className="single-feature">
                 <Image
                   className="icon"
-                  src={CryptoWallets}
+                  src={GamerGrowIcon}
                   alt=""
-                  width={60}
-                  height={60}
+                  width={36}
+                  height={36}
                 />
-                <h3 className="title">Crypto Wallets</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h3 className="title">GamerGrow</h3>
+                <p>Crypto Game Incubator</p>
               </div>
             </div>
             <div className="col-xl-4 col-lg-4 col-sm-10 col-md-6">
               <div className="single-feature">
                 <Image
                   className="icon"
-                  src={PortfolioTrackers}
+                  src={GamerPlayIcon}
                   alt=""
-                  width={60}
-                  height={60}
+                  width={36}
+                  height={36}
                 />
-                <h3 className="title">Portfolio & Trackers</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h3 className="title">GamerPlay</h3>
+                <p>Exclusive games for GHT holders.</p>
               </div>
             </div>
           </div>

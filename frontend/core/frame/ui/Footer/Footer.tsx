@@ -1,21 +1,20 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
-import logo from './assets/logo.png';
+import Link from 'next/link';
+import logo from '../../../../shared/assets/img/logo.png';
+import { NavMenu } from '../../../../shared/data/routes';
 
 export const Footer = () => (
   <div className="footer">
     <div className="footer-top">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-xl-4 col-lg-4 col-sm-10">
+          <div className="col-xl-6 col-lg-6 col-sm-10">
             <div className="about-widget">
               <a href="index.html" className="logo">
                 <Image src={logo} alt="LOGO" />
               </a>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis commodi ut illum. Cumque, unde suscipit error!
-              </p>
+              <p>Connect with the community</p>
               <div className="social-links">
                 <ul>
                   <li>
@@ -42,9 +41,8 @@ export const Footer = () => (
               </div>
             </div>
           </div>
-          <div className="col-xl-2 col-lg-2 col-sm-10">
+          <div className="col-xl-6 col-lg-6 col-sm-10">
             <div className="link-widget">
-              <h4 className="title">Play Games</h4>
               <ul>
                 <li>
                   <a href="#0" className="single-link">
@@ -74,20 +72,6 @@ export const Footer = () => (
               </ul>
             </div>
           </div>
-          <div className="col-xl-6 col-lg-6 col-sm-10">
-            <div className="newsletter-widget">
-              <h4 className="title">Subscribe To Our Newsletter</h4>
-              <form className="newsletter-form">
-                <input type="text" placeholder="Enter Your Mail Address" />
-                <button className="def-btn def-small">Subscribe</button>
-              </form>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Excepturi accusamus labore recusandae! Quia sint consectetur
-                explicabo.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -96,8 +80,13 @@ export const Footer = () => (
         <div className="row justify-content-center">
           <div className="col-xl-8 col-lg-8">
             <p>
-              Copyright © <a href="index.html">The Misco</a> - 2020. All Rights
-              Reserved
+              <small>
+                Copyright {new Date().getFullYear() + ' '}
+                <Link href={NavMenu.home.url} passHref>
+                  <a> GamerHub </a>
+                </Link>{' '}
+                All Rights Reserved.
+              </small>
             </p>
           </div>
         </div>

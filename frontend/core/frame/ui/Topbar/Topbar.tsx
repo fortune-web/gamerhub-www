@@ -1,16 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
-import logo from './assets/logo.png';
+import logo from '../../../../shared/assets/img/logo.png';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
 import { NavMenu } from '../../../../shared/data/routes';
+import styles from './Topbar.module.scss';
 
 export const Topbar = () => {
   const { pathname } = useRouter();
 
   return (
-    <div className="header">
+    <div className={classNames(styles.header, 'header')}>
       <div className="row">
         <div className="overflow-hidden col-xl-3 col-lg-3 d-xl-flex d-lg-flex d-block align-items-center">
           <div className="row">
