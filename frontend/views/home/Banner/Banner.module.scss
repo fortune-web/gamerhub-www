@@ -1,0 +1,22 @@
+.banner {
+  min-height: 100vh;
+  margin-top: -80px;
+}
+
+.bannerTxt {
+  padding-top: calc((100vh + 80px) / 2) !important;
+}
+
+.bannerTxt h1 {
+  color: #ffdeee !important;
+  font-weight: 800;
+  text-transform: none !important;
+  font-family: Coolvetica, Poppins, 'sans-serif';
+}
+
+.bannerTxt h4 {
+  margin-bottom: 80px !important;
+  font-family: Coolvetica, Poppins, 'sans-serif';
+  text-transform: none !important;
+  background-image: -webkit-linear-gradient(130deg, #ea00de, #ff0089);
+}
