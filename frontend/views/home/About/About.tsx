@@ -7,7 +7,7 @@ import GamerPlayIcon from './assets/prompt-triangle.png';
 
 const About: NextPage = () => {
   return (
-    <div className="iq-feature" id="feature">
+    <div className="iq-feature" id="about">
       <div className="container">
         <div className="row justify-content-xl-end justify-content-lg-end justify-content-sm-center">
           <div className="col-xl-5 col-lg-6 col-sm-10 col-md-7 d-xl-flex d-lg-flex d-block align-items-center">

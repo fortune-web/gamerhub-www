@@ -13,7 +13,7 @@ export const NavMenu: Menu = {
     title: 'Home',
   },
   about: {
-    url: '/about',
+    url: '/#about',
     title: 'About',
   },
   roadmap: {
