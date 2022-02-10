@@ -46,27 +46,22 @@ export const Footer = () => (
               <ul>
                 <li>
                   <a href="#0" className="single-link">
-                    Action Games
+                    GamerGrow
                   </a>
                 </li>
                 <li>
                   <a href="#0" className="single-link">
-                    Intellectual
+                    GamerPlay
                   </a>
                 </li>
                 <li>
                   <a href="#0" className="single-link">
-                    Online Casino
+                    GamerMerch
                   </a>
                 </li>
                 <li>
                   <a href="#0" className="single-link">
-                    Lottery Draw
-                  </a>
-                </li>
-                <li>
-                  <a href="#0" className="single-link">
-                    Chess Master
+                    GamerStream
                   </a>
                 </li>
               </ul>

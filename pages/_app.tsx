@@ -8,7 +8,6 @@ import {
   faTwitter,
   faPinterestP,
 } from '@fortawesome/free-brands-svg-icons';
-import { Frame } from '../frontend/core/frame/Frame';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../frontend/shared/ui/css/animate.css';
 import '../frontend/shared/ui/css/style.css';
@@ -33,9 +32,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       <meta name="description" content="Multi-chain games aggregator" />
       <title>GamerHub</title>
     </Head>
-    <Frame>
-      <Component {...pageProps} />
-    </Frame>
+    <Component {...pageProps} />
   </>
 );
 
