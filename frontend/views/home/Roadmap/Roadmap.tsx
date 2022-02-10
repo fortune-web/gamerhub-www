@@ -7,6 +7,9 @@ const Roadmap: NextPage = () => {
         <div className="row">
           <div className="col-xl-12 col-lg-12">
             <div className="contest-content">
+              <div className="section-title style-2 justify-content-center">
+                <h2>What you should expect</h2>
+              </div>
               <div className="tab-content" id="myTabContent">
                 <div
                   className="tab-pane fade show active"
