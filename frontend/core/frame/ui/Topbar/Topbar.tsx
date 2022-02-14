@@ -6,9 +6,11 @@ import { useRouter } from 'next/router';
 import classNames from 'classnames';
 import { NavMenu } from '../../../../shared/data/routes';
 import styles from './Topbar.module.scss';
+import { useState } from 'react';
 
 export const Topbar = () => {
   const { pathname } = useRouter();
+  const [navOpen, setNavOpen] = useState(false);
 
   return (
     <div className={classNames(styles.header, 'header')}>
@@ -28,11 +30,7 @@ export const Topbar = () => {
               <button
                 className="navbar-toggler"
                 type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
+                onClick={() => setNavOpen(!navOpen)}
               >
                 <FontAwesomeIcon icon={['fas', 'bars']} />
               </button>
@@ -44,12 +42,21 @@ export const Topbar = () => {
           id="navbar"
         >
           <div
-            className="collapse navbar-collapse justify-content-end"
-            id="navbarSupportedContent"
+            className={classNames(
+              navOpen ? styles.mobileNavOpen : '',
+              styles.mobileNav,
+              'col-md-12 w-100 p-0'
+            )}
           >
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav ml-auto justify-content-end">
               {Object.keys(NavMenu).map((key, index) => (
-                <li className="nav-item" key={index}>
+                <li
+                  className={classNames(
+                    navOpen ? styles.navItem : '',
+                    'nav-item'
+                  )}
+                  key={index}
+                >
                   <Link href={NavMenu[key].url} passHref>
                     <a
                       className={classNames(

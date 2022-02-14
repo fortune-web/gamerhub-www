@@ -3,3 +3,18 @@
   position: sticky;
   background: transparent !important;
 }
+@media screen and (max-width: 992px) {
+  .mobileNav {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+
+    &.mobileNavOpen {
+      visibility: visible;
+    }
+
+    & .navItem {
+      margin-bottom: 0px !important;
+    }
+  }
+}
