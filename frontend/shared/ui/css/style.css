@@ -44,10 +44,8 @@
   font-style: normal;
   font-weight: 400;
   src: local('Poppins Regular'), local('Poppins-Regular'),
-    /* Super Modern Browsers */
-      url('/static/fonts/poppins-v6-latin-regular.woff') format('woff'),
-    /* Modern Browsers */ url('/static/fonts/poppins-v6-latin-regular.ttf')
-      format('truetype');
+    url('/static/fonts/poppins-v6-latin-regular.woff') format('woff'),
+    url('/static/fonts/poppins-v6-latin-regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -55,8 +53,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('Coolvetica'),
-    /* Modern Browsers */ url('/static/fonts/Ccoolvetica-regular.ttf')
-      format('truetype');
+    url('/static/fonts/Coolvetica-regular.ttf') format('truetype');
 }
 
 html {

@@ -12,7 +12,7 @@ const Banner: NextPage = () => {
         )}
       >
         <h1>Multichain Crypto Game Aggregator.</h1>
-        <h4>Accessible . Stable . Decentralized</h4>
+        <h4>Metaverses . Gaming . NFTs</h4>
         <a href="#0" className="def-btn">
           Learn More
         </a>
