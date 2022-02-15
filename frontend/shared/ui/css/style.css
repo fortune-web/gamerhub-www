@@ -364,13 +364,9 @@ ul {
   width: 100%;
   top: 0;
   left: 0;
-  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.46);
 }
 .header.header-fixed .top-header {
   display: none;
-}
-.header.header-fixed .logo img {
-  width: 130px;
 }
 .header .logo {
   height: 100%;

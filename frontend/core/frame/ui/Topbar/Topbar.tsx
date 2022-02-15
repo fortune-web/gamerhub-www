@@ -7,13 +7,25 @@ import classNames from 'classnames';
 import { NavMenu } from '../../../../shared/data/routes';
 import styles from './Topbar.module.scss';
 import { useState } from 'react';
+import { useWindowScrollPosition } from 'rooks';
 
 export const Topbar = () => {
   const { pathname } = useRouter();
   const [navOpen, setNavOpen] = useState(false);
+  let verticalScrollPosition = 0;
+
+  if (typeof window !== 'undefined') {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    verticalScrollPosition = useWindowScrollPosition().scrollY;
+  }
 
   return (
-    <div className={classNames(styles.header, 'header')}>
+    <div
+      className={classNames('header header-fixed fadeInDown animated', {
+        [styles.header]: verticalScrollPosition <= 300,
+        [styles.headerFixed]: verticalScrollPosition > 300,
+      })}
+    >
       <div className="row">
         <div className="overflow-hidden col-xl-3 col-lg-3 d-xl-flex d-lg-flex d-block align-items-center">
           <div className="row">

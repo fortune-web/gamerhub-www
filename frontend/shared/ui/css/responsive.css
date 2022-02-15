@@ -155,10 +155,6 @@
   .header .top-header {
     display: none;
   }
-  .header.header-fixed {
-    position: initial;
-    box-shadow: none;
-  }
   .header .bottom-header.navbar .navbar-nav:after {
     display: none;
   }
@@ -544,10 +540,6 @@
   }
   .header .top-header {
     display: none;
-  }
-  .header.header-fixed {
-    position: initial;
-    box-shadow: none;
   }
   .header .bottom-header.navbar .navbar-nav:after {
     display: none;
@@ -957,10 +949,6 @@
   .header .top-header {
     display: none;
   }
-  .header.header-fixed {
-    position: initial;
-    box-shadow: none;
-  }
   .header .bottom-header.navbar .navbar-nav:after {
     display: none;
   }
@@ -1366,10 +1354,6 @@
   }
   .header .top-header {
     display: none;
-  }
-  .header.header-fixed {
-    position: initial;
-    box-shadow: none;
   }
   .header .bottom-header.navbar .navbar-nav:after {
     display: none;
