@@ -16,6 +16,10 @@ export const NavMenu: Menu = {
     url: '/#about',
     title: 'About',
   },
+  tokenomics: {
+    url: '/#tokenomics',
+    title: 'Tokenomics',
+  },
   roadmap: {
     url: '/#roadmap',
     title: 'Roadmap',
