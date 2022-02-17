@@ -36,15 +36,15 @@ export const Tokenomics = () => {
               </p>
               <p>
                 <h5 className={styles.tokenomicsTitle}>Seed Sale Price</h5> 1
-                GHT = 0.014
+                GHT = $0.014
               </p>
               <p>
                 <h5 className={styles.tokenomicsTitle}>Private Sale Price</h5> 1
-                GHT = 0.018
+                GHT = $0.018
               </p>
               <p>
                 <h5 className={styles.tokenomicsTitle}>Public Sale Price </h5> 1
-                GHT = 0.024
+                GHT = $0.024
               </p>
               <p>
                 <h5 className={styles.tokenomicsTitle}>TOTAL SUPPLY </h5>{' '}
