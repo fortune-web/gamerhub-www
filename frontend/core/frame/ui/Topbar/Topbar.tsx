@@ -34,7 +34,7 @@ export const Topbar = () => {
       <div className="container align-middle">
         <div className="navbar-brand m-0">
           <Link href={NavMenu.home.url} passHref>
-            <a>
+            <a onClick={() => setNavOpen(false)}>
               <Image src={logo} alt="LOGO" width={190} height={30} />
             </a>
           </Link>
@@ -75,6 +75,7 @@ export const Topbar = () => {
                       'nav-link',
                       pathname === NavMenu[key].url ? 'active' : ''
                     )}
+                    onClick={() => setNavOpen(false)}
                   >
                     {key}
                   </a>
