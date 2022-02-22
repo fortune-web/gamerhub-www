@@ -1,15 +1,4 @@
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  /* header */
-  .header {
-    padding: 0 30px;
-  }
-  .header .bottom-header.navbar .navbar-nav:after {
-    left: -30px;
-  }
-  .header .logo {
-    padding-right: 50px;
-  }
-
   /* banner */
   .banner .banner-txt h1 {
     font-size: 48px;
@@ -123,24 +112,6 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* header */
-  .header {
-    padding: 0 15px;
-  }
-  .header .logo {
-    display: inline-block;
-    padding-right: 0;
-    padding: 15px 0;
-  }
-  .header .logo:after {
-    display: none;
-  }
-  .header .logo {
-    width: 120px;
-  }
-  .header .logo img {
-    width: 100%;
-  }
   .header .navbar-toggler {
     font-size: 25px;
     color: #fff;
@@ -509,24 +480,6 @@
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* header */
-  .header {
-    padding: 0 15px;
-  }
-  .header .logo {
-    display: inline-block;
-    padding-right: 0;
-    padding: 15px 0;
-  }
-  .header .logo:after {
-    display: none;
-  }
-  .header .logo {
-    width: 120px;
-  }
-  .header .logo img {
-    width: 100%;
-  }
   .header .navbar-toggler {
     font-size: 25px;
     color: #fff;
@@ -917,24 +870,6 @@
 }
 
 @media only screen and (min-width: 480px) and (max-width: 575px) {
-  /* header */
-  .header {
-    padding: 0 15px;
-  }
-  .header .logo {
-    display: inline-block;
-    padding-right: 0;
-    padding: 15px 0;
-  }
-  .header .logo:after {
-    display: none;
-  }
-  .header .logo {
-    width: 120px;
-  }
-  .header .logo img {
-    width: 100%;
-  }
   .header .navbar-toggler {
     font-size: 25px;
     color: #fff;
@@ -1323,24 +1258,6 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-  /* header */
-  .header {
-    padding: 0 15px;
-  }
-  .header .logo {
-    display: inline-block;
-    padding-right: 0;
-    padding: 15px 0;
-  }
-  .header .logo:after {
-    display: none;
-  }
-  .header .logo {
-    width: 120px;
-  }
-  .header .logo img {
-    width: 100%;
-  }
   .header .navbar-toggler {
     font-size: 25px;
     color: #fff;

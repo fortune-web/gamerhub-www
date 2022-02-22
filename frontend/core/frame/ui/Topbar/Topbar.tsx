@@ -19,72 +19,71 @@ export const Topbar = () => {
     verticalScrollPosition = useWindowScrollPosition().scrollY;
   }
 
+  console.log(`navOpen ${navOpen}`);
+
   return (
-    <div
-      className={classNames('header header-fixed fadeInDown animated', {
-        [styles.header]: verticalScrollPosition <= 300,
-        [styles.headerFixed]: verticalScrollPosition > 300,
-      })}
+    <nav
+      className={classNames(
+        'header header-fixed fadeInDown animated navbar navbar-expand-lg',
+        {
+          [styles.header]: verticalScrollPosition <= 300,
+          [styles.headerFixed]: verticalScrollPosition > 300,
+        }
+      )}
     >
-      <div className="row">
-        <div className="overflow-hidden col-xl-3 col-lg-3 d-xl-flex d-lg-flex d-block align-items-center">
-          <div className="row">
-            <div className="col-xl-12 col-lg-12 col-7 d-xl-block d-lg-block">
-              <div className="logo">
-                <Link href={NavMenu.home.url} passHref>
-                  <a>
-                    <Image src={logo} alt="LOGO" />
+      <div className="container align-middle">
+        <div className="navbar-brand m-0">
+          <Link href={NavMenu.home.url} passHref>
+            <a>
+              <Image src={logo} alt="LOGO" width={190} height={30} />
+            </a>
+          </Link>
+        </div>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={() => setNavOpen(!navOpen)}
+        >
+          <FontAwesomeIcon icon={['fas', 'bars']} />
+        </button>
+        <div
+          className={classNames(
+            navOpen
+              ? `${styles.mobileNavOpen} col-md-12 p-0 dropdown-menu`
+              : 'collapse navbar-collapse',
+            styles.mobileNav,
+            'bottom-header navbar'
+          )}
+        >
+          <ul className="navbar-nav w-100 justify-content-end">
+            {Object.keys(NavMenu).map((key, index) => (
+              <li
+                className={classNames(
+                  navOpen ? styles.navItem : '',
+                  'nav-item'
+                )}
+                key={index}
+              >
+                <Link href={NavMenu[key].url} passHref>
+                  <a
+                    className={classNames(
+                      'nav-link',
+                      pathname === NavMenu[key].url ? 'active' : ''
+                    )}
+                  >
+                    {key}
                   </a>
                 </Link>
-              </div>
-            </div>
-            <div className="d-xl-none d-lg-none col-5 d-flex align-items-center justify-content-end">
-              <button
-                className="navbar-toggler"
-                type="button"
-                onClick={() => setNavOpen(!navOpen)}
-              >
-                <FontAwesomeIcon icon={['fas', 'bars']} />
-              </button>
-            </div>
-          </div>
+              </li>
+            ))}
+          </ul>
         </div>
-        <nav
-          className="col-xl-9 col-lg-9 bottom-header navbar navbar-expand-lg navbar-light"
-          id="navbar"
-        >
-          <div
-            className={classNames(
-              navOpen ? styles.mobileNavOpen : '',
-              styles.mobileNav,
-              'col-md-12 w-100 p-0'
-            )}
-          >
-            <ul className="navbar-nav ml-auto justify-content-end">
-              {Object.keys(NavMenu).map((key, index) => (
-                <li
-                  className={classNames(
-                    navOpen ? styles.navItem : '',
-                    'nav-item'
-                  )}
-                  key={index}
-                >
-                  <Link href={NavMenu[key].url} passHref>
-                    <a
-                      className={classNames(
-                        'nav-link',
-                        pathname === NavMenu[key].url ? 'active' : ''
-                      )}
-                    >
-                      {key}
-                    </a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </nav>
       </div>
-    </div>
+    </nav>
   );
 };

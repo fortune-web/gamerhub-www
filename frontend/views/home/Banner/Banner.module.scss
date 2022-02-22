@@ -4,7 +4,8 @@
 }
 
 .bannerTxt {
-  padding-top: calc((100vh + 80px) / 2) !important;
+  padding-top: calc((100vh + 80px) / 3) !important;
+  text-align: left !important;
 }
 
 .bannerTxt h1 {
@@ -19,4 +20,16 @@
   font-family: Coolvetica, Poppins, 'sans-serif';
   text-transform: none !important;
   background-image: -webkit-linear-gradient(130deg, #ea00de, #ff0089);
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    background: url('../../../shared/assets/img/gamerhub-bg-mobile.png') center
+      center no-repeat;
+    background-size: cover;
+  }
+  .bannerTxt {
+    padding-top: calc((100vh + 80px) / 2) !important;
+    text-align: center !important;
+  }
 }

@@ -356,7 +356,6 @@ ul {
 .header {
   background: #2a2a2a;
   z-index: 11;
-  padding: 0 100px;
   transition: all 0.3s ease-in;
 }
 .header.header-fixed {
@@ -598,8 +597,7 @@ ul {
 }
 
 .banner {
-  background: url('../../assets/img/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg')
-    center center no-repeat;
+  background: url('../../assets/img/gamerhub-bg.png') center center no-repeat;
   background-size: cover;
   position: relative;
   z-index: 2;
