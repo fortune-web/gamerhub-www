@@ -31,7 +31,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Multi-chain games aggregator" />
+      <meta name="description" content="Multi-chain crypto games aggregator" />
       <title>GamerHub</title>
     </Head>
     <Component {...pageProps} />

@@ -34,22 +34,30 @@ export const Tokenomics = () => {
               <p className={classNames(styles.tokenomicsIntro, 'sub-title')}>
                 TOKENOMICS
               </p>
-              <p>
+              <span className="text-secondary">
                 <h5 className={styles.tokenomicsTitle}>Seed Sale Price</h5> 1
                 GHT = $0.014
-              </p>
-              <p>
+                <br />
+                <br />
+              </span>
+              <span className="text-secondary">
                 <h5 className={styles.tokenomicsTitle}>Private Sale Price</h5> 1
                 GHT = $0.018
-              </p>
-              <p>
+                <br />
+                <br />
+              </span>
+              <span className="text-secondary">
                 <h5 className={styles.tokenomicsTitle}>Public Sale Price </h5> 1
                 GHT = $0.024
-              </p>
-              <p>
+                <br />
+                <br />
+              </span>
+              <span className="text-secondary">
                 <h5 className={styles.tokenomicsTitle}>TOTAL SUPPLY </h5>{' '}
                 500,000,000
-              </p>
+                <br />
+                <br />
+              </span>
             </div>
           </div>
           <div className="col-xl-6 col-lg-6">

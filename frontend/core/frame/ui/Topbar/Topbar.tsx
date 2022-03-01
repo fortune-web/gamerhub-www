@@ -19,8 +19,6 @@ export const Topbar = () => {
     verticalScrollPosition = useWindowScrollPosition().scrollY;
   }
 
-  console.log(`navOpen ${navOpen}`);
-
   return (
     <nav
       className={classNames(
