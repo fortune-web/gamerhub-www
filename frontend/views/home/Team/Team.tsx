@@ -17,10 +17,9 @@ const Team: NextPage = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-xl-3 col-lg-3 col-sm-6 team-1">
+          <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-1">
             <div className="single-member">
               <div className="part-img">
-                {/* <Image src={VictorImg} alt="" objectFit="fill" /> */}
                 <img src="/static/img/team/victor-20220206000508.png" alt="" />
               </div>
               <div className="part-text">
@@ -29,7 +28,7 @@ const Team: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="col-xl-3 col-lg-3 col-sm-6 team-2">
+          <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-2">
             <div className="single-member">
               <div className="part-img">
                 <img src="/static/img/team/glory-20220206002811.png" alt="" />
@@ -40,7 +39,7 @@ const Team: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="col-xl-3 col-lg-3 col-sm-6 team-3">
+          <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-3">
             <div className="single-member">
               <div className="part-img">
                 <img src="/static/img/team/caleb-20220206002729.png" alt="" />
@@ -51,7 +50,7 @@ const Team: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="col-xl-3 col-lg-3 col-sm-6 team-4">
+          <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-4">
             <div className="single-member">
               <div className="part-img">
                 <img src="/static/img/team/rex-20220206002749.png" alt="" />
@@ -59,6 +58,61 @@ const Team: NextPage = () => {
               <div className="part-text">
                 <span className="name">Rex Matthews</span>
                 <span className="position">COO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-1">
+            <div className="single-member">
+              <div className="part-img">
+                <img
+                  src="/static/img/team/haseeb-rehman-20220224231036.png"
+                  alt=""
+                />
+              </div>
+              <div className="part-text">
+                <span className="name">Haseeb Ur Rehman</span>
+                <span className="position">Lead Engineer</span>
+              </div>
+            </div>
+          </div>
+          <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-2">
+            <div className="single-member">
+              <div className="part-img">
+                <img
+                  src="/static/img/team/rehan-butt-20220224233635.png"
+                  alt=""
+                />
+              </div>
+              <div className="part-text">
+                <span className="name">Rehan Butt</span>
+                <span className="position">Blockchain Developer</span>
+              </div>
+            </div>
+          </div>
+          <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-3">
+            <div className="single-member">
+              <div className="part-img">
+                <img
+                  src="/static/img/team/zeeshan-yasin-20220224232822.png"
+                  alt=""
+                />
+              </div>
+              <div className="part-text">
+                <span className="name">Zeeshan Yasin</span>
+                <span className="position">Mobile developer</span>
+              </div>
+            </div>
+          </div>
+          <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-4">
+            <div className="single-member">
+              <div className="part-img">
+                <img src="/static/img/team/m-anas-20220224231044.png" alt="" />
+              </div>
+              <div className="part-text">
+                <span className="name">M. Anas</span>
+                <span className="position">UI Designer</span>
               </div>
             </div>
           </div>
