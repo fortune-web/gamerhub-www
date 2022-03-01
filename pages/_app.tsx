@@ -4,9 +4,10 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebookF,
-  faInstagram,
   faTwitter,
-  faPinterestP,
+  faMediumM,
+  faTelegram,
+  faDiscord,
 } from '@fortawesome/free-brands-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../frontend/shared/ui/css/animate.css';
@@ -16,10 +17,11 @@ import '../frontend/shared/ui/css/responsive.css';
 library.add(
   faBars,
   faSearch,
+  faDiscord,
   faFacebookF,
-  faInstagram,
+  faMediumM,
   faTwitter,
-  faPinterestP
+  faTelegram
 );
 
 const MyApp = ({ Component, pageProps }: AppProps) => (

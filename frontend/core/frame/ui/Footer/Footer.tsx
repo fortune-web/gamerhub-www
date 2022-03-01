@@ -18,23 +18,35 @@ export const Footer = () => (
               <div className="social-links">
                 <ul>
                   <li>
-                    <a href="#0" className="single-link">
-                      <FontAwesomeIcon icon={['fab', 'facebook-f']} />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#0" className="single-link">
+                    <a
+                      href="https://twitter.com/Gamer_hub_io"
+                      className="single-link"
+                    >
                       <FontAwesomeIcon icon={['fab', 'twitter']} />
                     </a>
                   </li>
                   <li>
-                    <a href="#0" className="single-link">
-                      <FontAwesomeIcon icon={['fab', 'instagram']} />
+                    <a
+                      href="https://t.me/GamerHubGroup"
+                      className="single-link"
+                    >
+                      <FontAwesomeIcon icon={['fab', 'telegram']} />
                     </a>
                   </li>
                   <li>
-                    <a href="#0" className="single-link">
-                      <FontAwesomeIcon icon={['fab', 'pinterest-p']} />
+                    <a
+                      href="https://discord.gg/bf55jRWtFz"
+                      className="single-link"
+                    >
+                      <FontAwesomeIcon icon={['fab', 'discord']} />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://medium.com/@gamerhub_io"
+                      className="single-link"
+                    >
+                      <FontAwesomeIcon icon={['fab', 'medium-m']} />
                     </a>
                   </li>
                 </ul>
