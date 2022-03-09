@@ -4,6 +4,7 @@ import IQImage from './assets/metaverse-giant.png';
 import GamerHubIcon from './assets/prompt-logo.png';
 import GamerGrowIcon from './assets/prompt-circle.png';
 import GamerPlayIcon from './assets/prompt-triangle.png';
+import GamerStreamIcon from './assets/prompt-block.png';
 
 const About: NextPage = () => {
   return (
@@ -15,12 +16,12 @@ const About: NextPage = () => {
               <h2>Reinventing The Crypto Gaming Experience</h2>
               <p>Access all games across all blockchains in one place.</p>
               <p>
-                The game aggregator framework is backed by a cross-chain
-                stablecoin protocol governed by the community.
+                GamerHub makes it easy for gamers to have access to different
+                games on different blockchains all in one place.
               </p>
               <p>
-                Gamerhub makes it easy for Gamers to have access to different
-                games on different blockchains all in one place.
+                The crypto game aggregator framework is backed and governed by
+                the gaming community.
               </p>
             </div>
           </div>
@@ -41,10 +42,42 @@ const About: NextPage = () => {
                   width={60}
                   height={36}
                 />
-                <h4 className="title">Unique Gamer Profile</h4>
-                <p>One unique profile for all GamerHub services.</p>
+                <h4 className="title">GamerHub</h4>
+                <p>
+                  Aggregated crypto games, gaming guilds, metaverses and NFTs.
+                </p>
               </div>
             </div>
+            <div className="col-md-4">
+              <div className="single-feature">
+                <Image
+                  className="icon"
+                  src={GamerStreamIcon}
+                  alt=""
+                  width={36}
+                  height={36}
+                />
+                <h4 className="title">GamerStream</h4>
+                <p>Crypto game streaming platform.</p>
+                <br />
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="single-feature">
+                <Image
+                  className="icon"
+                  src={GamerPlayIcon}
+                  alt=""
+                  width={36}
+                  height={36}
+                />
+                <h4 className="title">GamerPlay</h4>
+                <p>Exclusive games for GHT holders</p>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div className="row justify-content-sm-center justify-content-md-start">
             <div className="col-md-4">
               <div className="single-feature">
                 <Image
@@ -54,51 +87,8 @@ const About: NextPage = () => {
                   width={36}
                   height={36}
                 />
-                <h4 className="title">100s of Aggregated Games</h4>
-                <p>Includes gaming guilds, metaverse, DEFI, NFT, P2E games.</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="single-feature">
-                <Image
-                  className="icon"
-                  src={GamerPlayIcon}
-                  alt=""
-                  width={36}
-                  height={36}
-                />
-                <h4 className="title">In-game Asset Marketplace</h4>
-                <p>
-                  Intertrade in-game assets, characters, accessories, and NFTs.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row justify-content-sm-center justify-content-md-start">
-            <div className="col-md-4">
-              <div className="single-feature">
-                <Image
-                  className="icon"
-                  src={GamerPlayIcon}
-                  alt=""
-                  width={36}
-                  height={36}
-                />
-                <h4 className="title">Dapp Corner</h4>
-                <p>Supports multi-chain 3rd party DApp services.</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="single-feature">
-                <Image
-                  className="icon"
-                  src={GamerHubIcon}
-                  alt=""
-                  width={60}
-                  height={36}
-                />
-                <h4 className="title">NFT Marketplace</h4>
-                <p>Create, auction and trade NFTs on the GamerHub platform.</p>
+                <h4 className="title">GamerMerch</h4>
+                <p>Gamer merchandise shop.</p>
               </div>
             </div>
           </div>

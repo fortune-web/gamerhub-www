@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import styles from './Banner.module.scss';
 import classNames from 'classnames';
 
@@ -9,10 +10,10 @@ const Banner: NextPage = () => {
         <div className="col-l-3 col-md-6">
           <h1>Multichain Crypto Game Aggregator</h1>
           <br />
-          <h4>Metaverses . Gaming . NFTs</h4>
-          <a href="#0" className="def-btn">
-            Learn More
-          </a>
+          <h4>Metaverses . Games . Guilds . NFTs</h4>
+          <Link href="/#about" passHref>
+            <a className="def-btn">Learn More</a>
+          </Link>
         </div>
       </div>
     </div>

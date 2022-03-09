@@ -88,10 +88,10 @@ export const Tokenomics = () => {
                   </div>
                 </div>
                 <div className="part-text">
-                  <h3 className="title">Staking and DEFI</h3>
+                  <h3 className="title">GameFi and MetaFi</h3>
                   <p>
-                    GHT will be used for liquidity Mining, yield farming and
-                    other DEFI services.
+                    GHT will be used for game token mining and other GameFi
+                    services.
                   </p>
                 </div>
               </div>
