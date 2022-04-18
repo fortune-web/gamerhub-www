@@ -9,5 +9,8 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  }
 }
