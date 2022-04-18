@@ -15,7 +15,7 @@ const Banner: NextPage = () => {
             href="https://gamerhub-1.gitbook.io/gamerhub-whitepaper/"
             passHref
           >
-            <a className="def-btn">Learn More</a>
+            <a className="def-btn">Whitepaper</a>
           </Link>
         </div>
       </div>
