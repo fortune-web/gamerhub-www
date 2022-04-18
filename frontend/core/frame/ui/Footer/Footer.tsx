@@ -27,7 +27,7 @@ export const Footer = () => (
                   </li>
                   <li>
                     <a
-                      href="https://t.me/GamerHubGroup"
+                      href="https://t.me/GamerHub_group"
                       className="single-link"
                     >
                       <FontAwesomeIcon icon={['fab', 'telegram']} />

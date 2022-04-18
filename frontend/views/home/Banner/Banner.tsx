@@ -11,7 +11,10 @@ const Banner: NextPage = () => {
           <h1>Multichain Crypto Game Aggregator</h1>
           <br />
           <h4>Metaverses . Games . Guilds . NFTs</h4>
-          <Link href="/#about" passHref>
+          <Link
+            href="https://gamerhub-1.gitbook.io/gamerhub-whitepaper/"
+            passHref
+          >
             <a className="def-btn">Learn More</a>
           </Link>
         </div>
