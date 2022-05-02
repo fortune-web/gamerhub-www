@@ -57,7 +57,7 @@ const Team: NextPage = () => {
               </div>
               <div className="part-text">
                 <span className="name">Rex Matthews</span>
-                <span className="position">COO</span>
+                <span className="position">Senior Community Manager</span>
               </div>
             </div>
           </div>
