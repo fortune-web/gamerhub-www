@@ -17,6 +17,7 @@ const LoginPage: NextPage = () => {
   const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [userIsLoggedIn, setUserIsLoggedIn] = useState(false);
 
+  //TODO: move this to context
   useEffect(() => {
     (async () => {
       if (pageLoading) {

@@ -4,7 +4,7 @@ import logo from '../../../../shared/assets/img/logo.png';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
-import { NavMenu } from '../../../../shared/data/routes';
+import { NavMenu, RootRoutes } from '../../../../shared/data/routes';
 import styles from './Topbar.module.scss';
 import { useState } from 'react';
 import { useWindowScrollPosition } from 'rooks';
@@ -86,7 +86,7 @@ export const Topbar = ({ pageType }: Props) => {
               </li>
             ))}
             <li className="nav-item">
-              <Link href="/login" passHref>
+              <Link href={RootRoutes.explore.url} passHref>
                 <a className="def-btn">Explore</a>
               </Link>
             </li>

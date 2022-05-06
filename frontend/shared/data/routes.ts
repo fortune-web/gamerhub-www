@@ -36,7 +36,7 @@ export const RootRoutes = {
     title: 'Recognizing user...',
   },
   explore: {
-    url: '/profile',
+    url: '/explore',
     title: 'Explore Games',
   },
   profile: {

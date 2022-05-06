@@ -971,7 +971,7 @@ ul {
 
 .games {
   padding: 120px 0 90px;
-  background: #111;
+  background: #333;
 }
 .games.game-page {
   padding-bottom: 120px;
@@ -997,7 +997,7 @@ ul {
 }
 .games.game-page .games-filter-area .blog-search form input {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgb(255, 255, 255, 0.2);
   height: 50px;
   width: 100%;
   padding: 0 30px;
@@ -1190,7 +1190,7 @@ ul {
   opacity: 0.3;
 }
 .games .all-games .title-cover .games-title .icon {
-  color: #ff464b;
+  color: #ea00de;
   position: relative;
   top: -3px;
 }
