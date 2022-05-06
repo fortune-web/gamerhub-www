@@ -25,3 +25,22 @@ export const NavMenu: Menu = {
     title: 'Roadmap',
   },
 };
+
+export const RootRoutes = {
+  login: {
+    url: '/login',
+    title: 'Explore Games',
+  },
+  loginCallback: {
+    url: '/callback',
+    title: 'Recognizing user...',
+  },
+  explore: {
+    url: '/profile',
+    title: 'Explore Games',
+  },
+  profile: {
+    url: '/profile',
+    title: 'Explore Games',
+  },
+};

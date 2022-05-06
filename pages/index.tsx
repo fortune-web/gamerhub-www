@@ -8,7 +8,7 @@ import { Tokenomics } from '../frontend/views/home/Tokenomics/Tokenomics';
 
 const Home: NextPage = () => {
   return (
-    <Frame>
+    <Frame pageType="landing">
       <Banner />
       <About />
       <Tokenomics />
