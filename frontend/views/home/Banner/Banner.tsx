@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 import styles from './Banner.module.scss';
 import classNames from 'classnames';
+import { RootRoutes } from '../../../shared/data/routes';
 
 const Banner: NextPage = () => {
   return (
@@ -11,11 +12,9 @@ const Banner: NextPage = () => {
           <h1>Multichain Crypto Game Aggregator</h1>
           <br />
           <h4>Metaverses . Games . Guilds . NFTs</h4>
-          <Link
-            href="https://gamerhub-1.gitbook.io/gamerhub-whitepaper/"
-            passHref
-          >
-            <a className="def-btn">Whitepaper</a>
+
+          <Link href={RootRoutes.explore.url} passHref>
+            <a className="def-btn">Explore</a>
           </Link>
         </div>
       </div>
