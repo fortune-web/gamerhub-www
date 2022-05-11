@@ -14,7 +14,7 @@ const Banner: NextPage = () => {
           <h4>Metaverses . Games . Guilds . NFTs</h4>
 
           <Link href={RootRoutes.explore.url} passHref>
-            <a className="def-btn">Explore</a>
+            <a className="def-btn">Dive in</a>
           </Link>
         </div>
       </div>

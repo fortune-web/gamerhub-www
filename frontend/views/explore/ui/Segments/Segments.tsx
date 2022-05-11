@@ -4,7 +4,7 @@ import {
   TrendingNowIcon,
   NewReleaseIcon,
   MostPopularIcon,
-} from './SegmentsIcons';
+} from '../Icons/Icons';
 
 export const Segments = () => {
   return (

@@ -1178,6 +1178,7 @@ ul {
   z-index: 2;
   color: rgba(255, 255, 255, 0.8);
   margin: -4px 0 26px;
+  line-height: 2;
 }
 .games .all-games .title-cover .games-title:after {
   position: absolute;

@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import mockImage from './assets/img/assets-1.jpg';
-import { AllGenresIcon, NewReleaseIcon } from './SegmentsIcons';
+import { AllGenresIcon, NewReleaseIcon } from '../Icons/Icons';
+import styles from './Games.module.scss';
+import classNames from 'classnames';
 
 export const Games = () => {
   return (
@@ -10,14 +12,16 @@ export const Games = () => {
           <h4 className="games-title">
             <span className="icon icon-1">
               <AllGenresIcon />
-            </span>{' '}
+            </span>
             All Games
           </h4>
         </div>
         <div className="row miscoo-row">
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -30,7 +34,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -43,7 +49,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -56,7 +64,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -69,7 +79,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -82,7 +94,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -95,7 +109,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -108,7 +124,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -133,7 +151,9 @@ export const Games = () => {
         <div className="row miscoo-row">
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -146,7 +166,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -159,7 +181,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -172,7 +196,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -185,7 +211,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -198,7 +226,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">
@@ -211,7 +241,9 @@ export const Games = () => {
           </div>
           <div className="col-xl-3 col-lg-4 col-sm-6">
             <div className="single-game">
-              <div className="part-img">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
                 <Image src={mockImage} alt="Game" width={500} height={500} />
               </div>
               <div className="part-text">

@@ -85,6 +85,11 @@ export const Topbar = ({ pageType }: Props) => {
                 </Link>
               </li>
             ))}
+            <li className="nav-item">
+              <Link href={RootRoutes.explore.url} passHref>
+                <a className="def-btn">Explore</a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
