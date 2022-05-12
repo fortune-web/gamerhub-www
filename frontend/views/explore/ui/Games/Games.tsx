@@ -20,7 +20,7 @@ export const Games = () => {
           </h4>
         </div>
         <div className="row miscoo-row">
-          <div className="col-xl-3 col-lg-4 col-sm-6 mb-3">
+          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
             <div className="single-game">
               <div
                 className={classNames('part-img', styles.gameImageContainer)}
@@ -35,7 +35,7 @@ export const Games = () => {
               </div>
             </div>
           </div>
-          <div className="col-xl-3 col-lg-4 col-sm-6 mb-3">
+          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
             <div className="single-game">
               <div
                 className={classNames('part-img', styles.gameImageContainer)}
@@ -53,7 +53,7 @@ export const Games = () => {
               </div>
             </div>
           </div>
-          <div className="col-xl-3 col-lg-4 col-sm-6 mb-3">
+          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
             <div className="single-game">
               <div
                 className={classNames('part-img', styles.gameImageContainer)}
