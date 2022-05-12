@@ -1261,7 +1261,7 @@ ul {
   margin-top: -7px;
   margin-bottom: 25px;
   position: relative;
-  left: -100%;
+  left: -120%;
   transition: all 0.3s ease-in;
   transition-delay: 0.2s;
 }
