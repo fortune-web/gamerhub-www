@@ -17,11 +17,10 @@ export const Tokenomics = () => {
             <div className="part-para">
               <h2 className="title">GHT Token</h2>
               <p className="mb-5">
-                The GHT token is primarily deployed on the Terra Blockchain. We
-                are also going to bridge the token on other blockchains like
-                Solana, BSC, Ethereum to allow the whole Gaming ecosystem easy
-                access to participate in the Gamings revolution. Find below the
-                Contract Address of GHT Token.
+                The GHT token is a Multichain token that will be created on
+                blockchains like Solana, BSC, Ethereum, NEAR, IOTEX to give the
+                whole gaming ecosystem an easy access to participate in the
+                gaming revolution.
               </p>
               <p className="mb-5">
                 <a href="#" className="def-btn sign-up-btn">
