@@ -62,6 +62,12 @@ export const Games = () => {
               </div>
               <div className="part-text">
                 <h4 className="game-title">Abeats Games</h4>
+                <a
+                  href="https://twitter.com/AbeatsGames"
+                  className="def-btn def-small"
+                >
+                  Learn More
+                </a>
               </div>
             </div>
           </div>
