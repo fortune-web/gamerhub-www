@@ -12,8 +12,11 @@ const Callback: NextPage = () => {
     magic.auth
       .loginWithCredential()
       .then((decentralizedId) => {
-        if (decentralizedId) router.push(RootRoutes.explore.url);
-        else throw new Error('User not logged in');
+        if (decentralizedId) {
+          router.query['back']
+            ? router.push(`${router.query['back']}`)
+            : router.push(RootRoutes.explore.url);
+        } else throw new Error('User not logged in');
       })
       .catch(() => {
         router.push(RootRoutes.login.url);

@@ -30,7 +30,7 @@ export const UserProfileProvider: FC = ({ children }) => {
 
   if (!userProfileContext) {
     if (!router.pathname.includes(RootRoutes.login.url)) {
-      router.push(RootRoutes.login.url);
+      router.push(`${RootRoutes.login.url}?back=${router.pathname}`);
       return null;
     }
   }
