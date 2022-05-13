@@ -9,6 +9,8 @@ import PiratesLand from './assets/img/PiratesLand.png';
 import CyberPop from './assets/img/CyberPop.png';
 import Ookeenga from './assets/img/Ookeenga.png';
 import Twilight from './assets/img/Twilight.png';
+import HorizonLand from './assets/img/HorizonLand.png';
+import SwiftShootout from './assets/img/SwiftShootout.jpg';
 
 export const Games = () => {
   return (
@@ -114,19 +116,49 @@ export const Games = () => {
               <div
                 className={classNames('part-img', styles.gameImageContainer)}
               >
-                <Image src={Abeat} alt="Abeats" width={500} height={500} />
+                <Image
+                  src={SwiftShootout}
+                  alt="Swift Shootout"
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="part-text">
-                <h4 className="game-title">Abeats</h4>
+                <h4 className="game-title">Swift Shootout</h4>
                 <a
-                  href="https://twitter.com/AbeatsGames"
+                  href="https://www.swiftshootout.com/demo"
                   className="def-btn def-small"
                 >
-                  Learn More
+                  Play Now
                 </a>
               </div>
             </div>
           </div>
+          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
+            <div className="single-game">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
+                <Image
+                  src={HorizonLand}
+                  alt="Horizon Land"
+                  width={500}
+                  height={500}
+                />
+              </div>
+              <div className="part-text">
+                <h4 className="game-title">Horizon Land</h4>
+                <a
+                  href="https://www.swiftshootout.com/demo"
+                  className="def-btn def-small"
+                >
+                  Play Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row miscoo-row">
           <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
             <div className="single-game">
               <div
@@ -150,8 +182,24 @@ export const Games = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="row miscoo-row">
+          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
+            <div className="single-game">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
+                <Image src={Abeat} alt="Abeats" width={500} height={500} />
+              </div>
+              <div className="part-text">
+                <h4 className="game-title">Abeats</h4>
+                <a
+                  href="https://twitter.com/AbeatsGames"
+                  className="def-btn def-small"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
           <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
             <div className="single-game">
               <div
