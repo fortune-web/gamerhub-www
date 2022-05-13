@@ -7,6 +7,8 @@ import MetaMoba from './assets/img/MetaMoba.jpg';
 import Warhands from './assets/img/Warhands.jpg';
 import PiratesLand from './assets/img/PiratesLand.png';
 import CyberPop from './assets/img/CyberPop.png';
+import Ookeenga from './assets/img/Ookeenga.png';
+import Twilight from './assets/img/Twilight.png';
 
 export const Games = () => {
   return (
@@ -26,7 +28,12 @@ export const Games = () => {
               <div
                 className={classNames('part-img', styles.gameImageContainer)}
               >
-                <Image src={Warhands} alt="Game" width={500} height={500} />
+                <Image
+                  src={Warhands}
+                  alt="WarHands NFT"
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="part-text">
                 <h4 className="game-title">WarHands NFT</h4>
@@ -41,7 +48,12 @@ export const Games = () => {
               <div
                 className={classNames('part-img', styles.gameImageContainer)}
               >
-                <Image src={MetaMoba} alt="Game" width={500} height={500} />
+                <Image
+                  src={MetaMoba}
+                  alt="Meta Moba"
+                  width={500}
+                  height={500}
+                />
               </div>
               <div className="part-text">
                 <h4 className="game-title">Meta Moba</h4>
@@ -50,49 +62,6 @@ export const Games = () => {
                   className="def-btn def-small"
                 >
                   Play Now
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
-            <div className="single-game">
-              <div
-                className={classNames('part-img', styles.gameImageContainer)}
-              >
-                <Image src={Abeat} alt="Game" width={500} height={500} />
-              </div>
-              <div className="part-text">
-                <h4 className="game-title">Abeats Games</h4>
-                <a
-                  href="https://twitter.com/AbeatsGames"
-                  className="def-btn def-small"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row miscoo-row">
-          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
-            <div className="single-game">
-              <div
-                className={classNames('part-img', styles.gameImageContainer)}
-              >
-                <Image
-                  src={PiratesLand}
-                  alt="Pirates Land"
-                  width={500}
-                  height={500}
-                />
-              </div>
-              <div className="part-text">
-                <h4 className="game-title">Pirates Land</h4>
-                <a
-                  href="https://twitter.com/PiratesLandio"
-                  className="def-btn def-small"
-                >
-                  Learn More
                 </a>
               </div>
             </div>
@@ -116,6 +85,87 @@ export const Games = () => {
                   className="def-btn def-small"
                 >
                   Play Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row miscoo-row">
+          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
+            <div className="single-game">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
+                <Image src={Twilight} alt="Twilight" width={500} height={500} />
+              </div>
+              <div className="part-text">
+                <h4 className="game-title">Twilight</h4>
+                <a
+                  href="https://twilightgame.io/gamebeta_v5/index.html"
+                  className="def-btn def-small"
+                >
+                  Play Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
+            <div className="single-game">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
+                <Image src={Abeat} alt="Abeats" width={500} height={500} />
+              </div>
+              <div className="part-text">
+                <h4 className="game-title">Abeats</h4>
+                <a
+                  href="https://twitter.com/AbeatsGames"
+                  className="def-btn def-small"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
+            <div className="single-game">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
+                <Image
+                  src={PiratesLand}
+                  alt="Pirates Land"
+                  width={500}
+                  height={500}
+                />
+              </div>
+              <div className="part-text">
+                <h4 className="game-title">Pirates Land</h4>
+                <a
+                  href="https://twitter.com/PiratesLandio"
+                  className="def-btn def-small"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row miscoo-row">
+          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
+            <div className="single-game">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
+                <Image src={Ookeenga} alt="Ookeenga" width={500} height={500} />
+              </div>
+              <div className="part-text">
+                <h4 className="game-title">Ookeenga</h4>
+                <a
+                  href="https://www.youtube.com/watch?v=B9CNqIplOlA"
+                  className="def-btn def-small"
+                >
+                  Learn More
                 </a>
               </div>
             </div>
