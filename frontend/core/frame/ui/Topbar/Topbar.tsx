@@ -4,14 +4,20 @@ import logo from '../../../../shared/assets/img/logo.png';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
-import { NavMenu } from '../../../../shared/data/routes';
+import { NavMenu, RootRoutes } from '../../../../shared/data/routes';
 import styles from './Topbar.module.scss';
 import { useState } from 'react';
 import { useWindowScrollPosition } from 'rooks';
+import { PageType } from '../../Frame';
 
-export const Topbar = () => {
+interface Props {
+  pageType?: PageType;
+}
+
+export const Topbar = ({ pageType }: Props) => {
   const { pathname } = useRouter();
   const [navOpen, setNavOpen] = useState(false);
+
   let verticalScrollPosition = 0;
 
   if (typeof window !== 'undefined') {
@@ -21,13 +27,12 @@ export const Topbar = () => {
 
   return (
     <nav
-      className={classNames(
-        'header header-fixed fadeInDown animated navbar navbar-expand-lg',
-        {
-          [styles.header]: verticalScrollPosition <= 300,
-          [styles.headerFixed]: verticalScrollPosition > 300,
-        }
-      )}
+      className={classNames('header animated navbar navbar-expand-lg', {
+        'header-fixed': pageType !== 'others',
+        fadeInDown: pageType !== 'others',
+        [styles.header]: pageType !== 'others' && verticalScrollPosition <= 300,
+        [styles.headerFixed]: verticalScrollPosition > 300,
+      })}
     >
       <div className="container align-middle">
         <div className="navbar-brand m-0">
@@ -58,7 +63,7 @@ export const Topbar = () => {
             'bottom-header navbar'
           )}
         >
-          <ul className="navbar-nav w-100 justify-content-end">
+          <ul className="navbar-nav w-100 justify-content-end align-items-center">
             {Object.keys(NavMenu).map((key, index) => (
               <li
                 className={classNames(
@@ -80,6 +85,11 @@ export const Topbar = () => {
                 </Link>
               </li>
             ))}
+            <li className="nav-item">
+              <Link href={RootRoutes.explore.url} passHref>
+                <a className="def-btn">Explore</a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

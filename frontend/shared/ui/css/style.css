@@ -511,39 +511,6 @@ ul {
   .bottom-header
   .navbar
   .navbar-nav
-  .nav-item.dropdown
-  .dropdown-menu
-  .dropdown-item:hover,
-.header
-  .bottom-header
-  .navbar
-  .navbar-nav
-  .nav-item.dropdown
-  .dropdown-menu
-  .dropdown-item:active {
-  color: #fff;
-  background: #fff;
-}
-.header
-  .bottom-header
-  .navbar
-  .navbar-nav
-  .nav-item.dropdown
-  .dropdown-menu
-  .dropdown-item:hover:after,
-.header
-  .bottom-header
-  .navbar
-  .navbar-nav
-  .nav-item.dropdown
-  .dropdown-menu
-  .dropdown-item:active:after {
-  opacity: 1;
-}
-.header
-  .bottom-header
-  .navbar
-  .navbar-nav
   .nav-item.dropdown:hover
   .dropdown-menu {
   opacity: 1;
@@ -1004,7 +971,7 @@ ul {
 
 .games {
   padding: 120px 0 90px;
-  background: #111;
+  background: #333;
 }
 .games.game-page {
   padding-bottom: 120px;
@@ -1030,7 +997,7 @@ ul {
 }
 .games.game-page .games-filter-area .blog-search form input {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgb(255, 255, 255, 0.2);
   height: 50px;
   width: 100%;
   padding: 0 30px;
@@ -1211,6 +1178,7 @@ ul {
   z-index: 2;
   color: rgba(255, 255, 255, 0.8);
   margin: -4px 0 26px;
+  line-height: 2;
 }
 .games .all-games .title-cover .games-title:after {
   position: absolute;
@@ -1223,7 +1191,7 @@ ul {
   opacity: 0.3;
 }
 .games .all-games .title-cover .games-title .icon {
-  color: #ff464b;
+  color: #ea00de;
   position: relative;
   top: -3px;
 }
@@ -1293,7 +1261,7 @@ ul {
   margin-top: -7px;
   margin-bottom: 25px;
   position: relative;
-  left: -100%;
+  left: -120%;
   transition: all 0.3s ease-in;
   transition-delay: 0.2s;
 }
@@ -3480,7 +3448,6 @@ ul {
   padding-left: 25px;
   margin-bottom: 24px;
   margin-top: -6px;
-  text-transform: capitalize;
 }
 .register .reg-body form h4.sub-title:after {
   position: absolute;
