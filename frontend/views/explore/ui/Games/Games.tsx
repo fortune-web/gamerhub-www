@@ -200,24 +200,6 @@ export const Games = () => {
               </div>
             </div>
           </div>
-          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
-            <div className="single-game">
-              <div
-                className={classNames('part-img', styles.gameImageContainer)}
-              >
-                <Image src={Ookeenga} alt="Ookeenga" width={500} height={500} />
-              </div>
-              <div className="part-text">
-                <h4 className="game-title">Ookeenga</h4>
-                <a
-                  href="https://www.youtube.com/watch?v=B9CNqIplOlA"
-                  className="def-btn def-small"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
