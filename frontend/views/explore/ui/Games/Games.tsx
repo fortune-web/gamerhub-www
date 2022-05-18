@@ -7,10 +7,11 @@ import MetaMoba from './assets/img/MetaMoba.jpg';
 import Warhands from './assets/img/Warhands.jpg';
 import PiratesLand from './assets/img/PiratesLand.png';
 import CyberPop from './assets/img/CyberPop.png';
-import Ookeenga from './assets/img/Ookeenga.png';
 import Twilight from './assets/img/Twilight.png';
 import HorizonLand from './assets/img/HorizonLand.png';
 import SwiftShootout from './assets/img/SwiftShootout.jpg';
+import Ikonic from './assets/img/Ikonic.png';
+import MetaShooter from './assets/img/MetaShooter.png';
 
 export const Games = () => {
   return (
@@ -193,6 +194,49 @@ export const Games = () => {
                 <h4 className="game-title">Abeats</h4>
                 <a
                   href="https://twitter.com/AbeatsGames"
+                  className="def-btn def-small"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
+            <div className="single-game">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
+                <Image src={Ikonic} alt="Ikonic" width={500} height={500} />
+              </div>
+              <div className="part-text">
+                <h4 className="game-title">Ikonic</h4>
+                <a
+                  href="https://youtu.be/wrSLZypDFrg"
+                  className="def-btn def-small"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row miscoo-row">
+          <div className="col-xl-4 col-lg-4 col-sm-6 mb-3">
+            <div className="single-game">
+              <div
+                className={classNames('part-img', styles.gameImageContainer)}
+              >
+                <Image
+                  src={MetaShooter}
+                  alt="Meta Shooter"
+                  width={500}
+                  height={500}
+                />
+              </div>
+              <div className="part-text">
+                <h4 className="game-title">Meta Shooter</h4>
+                <a
+                  href="https://youtu.be/ZwC9Ux0vLy8"
                   className="def-btn def-small"
                 >
                   Learn More
