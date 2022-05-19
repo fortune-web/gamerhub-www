@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './Game.module.scss';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 export interface EachGame {
   imageSrc: StaticImageData;
