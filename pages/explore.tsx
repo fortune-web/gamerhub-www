@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import { Frame } from '../frontend/core/frame/Frame';
 import { UserProfileProvider } from '../frontend/shared/contexts/UserProfileContext/UserProfileProvider';
 import { Games } from '../frontend/views/explore/container/Games/Games';
-import { Segments } from '../frontend/views/explore/ui/Segments/Segments';
+import { Segments } from '../frontend/views/explore/container/Segments/Segments';
 
 const Explore: NextPage = () => {
   return (

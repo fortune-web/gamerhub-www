@@ -22,15 +22,7 @@ export const Games = ({ data }: Props) => {
             return (
               <div className="row miscoo-row" key={index}>
                 {gameRow.map((game, gIndex) => {
-                  return (
-                    <Game
-                      imageSrc={game.imageSrc}
-                      title={game.title}
-                      ctaLink={game.ctaLink}
-                      ctaText={game.ctaText}
-                      key={gIndex}
-                    />
-                  );
+                  return <Game {...game} key={gIndex} />;
                 })}
               </div>
             );
