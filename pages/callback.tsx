@@ -9,16 +9,17 @@ const Callback: NextPage = () => {
   const router = useRouter();
 
   useEffect(() => {
+    const backUrl = router.query['back'] ?? RootRoutes.explore.url;
+
     magic.auth
       .loginWithCredential()
       .then((decentralizedId) => {
         if (decentralizedId) {
-          router.query['back']
-            ? router.push(`${router.query['back']}`)
-            : router.push(RootRoutes.explore.url);
+          router.push(`${backUrl}`);
         } else throw new Error('User not logged in');
       })
       .catch(() => {
+        magic.user.logout().catch(console.log);
         router.push(RootRoutes.login.url);
       });
   }, [router]);
