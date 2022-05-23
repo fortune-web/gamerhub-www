@@ -24,9 +24,7 @@ const LoginPage: NextPage = () => {
         await magic.auth.loginWithMagicLink({
           ...data,
           redirectURI: new URL(
-            encodeURIComponent(
-              `${RootRoutes.loginCallback.url}?back=${backUrl}`
-            ),
+            `${RootRoutes.loginCallback.url}?back=${backUrl}`,
             window.location.origin
           ).href,
         });
