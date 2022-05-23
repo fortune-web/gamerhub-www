@@ -19,14 +19,17 @@ const LoginPage: NextPage = () => {
     async (data: LoginData) => {
       setIsLoggingIn(true);
       try {
+        const backUrl = router.query['back'] ?? RootRoutes.explore.url;
+
         await magic.auth.loginWithMagicLink({
           ...data,
           redirectURI: new URL(
-            `${RootRoutes.loginCallback.url}?back=${router.query['back']}`,
+            `${RootRoutes.loginCallback.url}?back=${backUrl}`,
             window.location.origin
           ).href,
         });
-        router.push(`${router.query['back']}`);
+
+        router.push(`${backUrl}`);
       } finally {
         setIsLoggingIn(false);
       }
