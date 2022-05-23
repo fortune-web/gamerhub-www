@@ -9,20 +9,21 @@ const Callback: NextPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const backUrl = router.query['back'] ?? RootRoutes.explore.url;
+    (async () => {
+      const backUrl = router.query['back'] ?? RootRoutes.explore.url;
 
-    magic.auth
-      .loginWithCredential()
-      .then((decentralizedId) => {
+      try {
+        const decentralizedId = await magic.auth.loginWithCredential();
+
         if (decentralizedId) {
           router.push(`${backUrl}`);
         } else throw new Error('User not logged in');
-      })
-      .catch((err) => {
-        console.log('Error: ', err);
+      } catch (error) {
+        console.log('Error: ', error);
         magic.user.logout().catch(console.log);
         router.push(RootRoutes.login.url);
-      });
+      }
+    })();
   }, [router]);
 
   return <Loading />;
