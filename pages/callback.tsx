@@ -18,7 +18,8 @@ const Callback: NextPage = () => {
           router.push(`${backUrl}`);
         } else throw new Error('User not logged in');
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log('Error: ', err);
         magic.user.logout().catch(console.log);
         router.push(RootRoutes.login.url);
       });
