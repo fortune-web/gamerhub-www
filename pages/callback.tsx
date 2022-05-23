@@ -19,6 +19,7 @@ const Callback: NextPage = () => {
         } else throw new Error('User not logged in');
       })
       .catch(() => {
+        magic.user.logout().catch(console.log);
         router.push(RootRoutes.login.url);
       });
   }, [router]);

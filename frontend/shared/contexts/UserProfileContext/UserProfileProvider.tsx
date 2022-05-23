@@ -22,7 +22,7 @@ export const UserProfileProvider: FC = ({ children }) => {
       }
       setPageLoading(false);
     })();
-  });
+  }, []);
 
   if (pageLoading) {
     return <Loading />;
@@ -31,6 +31,11 @@ export const UserProfileProvider: FC = ({ children }) => {
   if (!userProfileContext) {
     if (!router.pathname.includes(RootRoutes.login.url)) {
       router.push(`${RootRoutes.login.url}?back=${router.pathname}`);
+      return null;
+    }
+  } else {
+    if (router.pathname.includes(RootRoutes.login.url)) {
+      router.push(RootRoutes.explore.url);
       return null;
     }
   }
