@@ -23,7 +23,10 @@ const LoginPage: NextPage = () => {
 
         await magic.auth.loginWithMagicLink({
           ...data,
-          redirectURI: `${window.location.origin}${RootRoutes.loginCallback.url}?back=${backUrl}`,
+          redirectURI: new URL(
+            RootRoutes.loginCallback.url,
+            window.location.origin
+          ).href,
         });
 
         router.push(`${backUrl}`);
