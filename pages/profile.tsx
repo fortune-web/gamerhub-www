@@ -1,41 +1,26 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { useRouter } from 'next/router';
+import React, { useCallback, useContext } from 'react';
 import { magic } from '../frontend/lib/magic';
-import { MagicUserMetadata } from 'magic-sdk';
 import { Frame } from '../frontend/core/frame/Frame';
-import { Loading } from '../frontend/shared/ui/components/Loading';
-import { RootRoutes } from '../frontend/shared/data/routes';
+import { UserProfileContext } from '../frontend/shared/contexts/UserProfileContext/UserProfileContext';
 
 export default function Profile() {
-  const [userMetadata, setUserMetadata] = useState<MagicUserMetadata>();
-  const router = useRouter();
+  const userProfileContext = useContext(UserProfileContext);
 
-  useEffect(() => {
-    magic.user.isLoggedIn().then((magicIsLoggedIn) => {
-      if (magicIsLoggedIn) {
-        magic.user.getMetadata().then(setUserMetadata);
-      } else {
-        router.push(RootRoutes.login.url);
-      }
-    });
-  }, [router]);
-
-  const logout = useCallback(() => {
-    magic.user.logout().then(() => {
-      router.push(RootRoutes.login.url);
-    });
-  }, [router]);
+  const logout = useCallback(async () => {
+    await magic.user.logout();
+    userProfileContext && userProfileContext.setProfile(undefined);
+  }, [userProfileContext]);
 
   return (
     <Frame>
-      {userMetadata ? (
-        <div className="container">
-          <h1>Current user: {userMetadata.email}</h1>
-          <button onClick={logout}>Logout</button>
-        </div>
-      ) : (
-        <Loading />
-      )}
+      <div className="container mb-5 mt-5">
+        <h1>
+          Current user email: {userProfileContext?.profile?.email ?? 'unknown'}
+        </h1>
+        <button className="btn def-btn" onClick={logout}>
+          Logout
+        </button>
+      </div>
     </Frame>
   );
 }
