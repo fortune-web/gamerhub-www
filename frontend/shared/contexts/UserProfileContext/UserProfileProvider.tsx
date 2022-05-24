@@ -11,18 +11,21 @@ export const UserProfileProvider: FC = ({ children }) => {
   const [userProfileContext, setUserProfileContext] = useState<UserProfile>();
 
   useEffect(() => {
-    (async () => {
-      const userIsLoggedIn = await magic.user.isLoggedIn();
+    if (pageLoading) {
+      (async () => {
+        const userIsLoggedIn = await magic.user.isLoggedIn();
 
-      if (userIsLoggedIn) {
-        const { email } = await magic.user.getMetadata();
-        const decentralizedId = await magic.user.getIdToken();
+        if (userIsLoggedIn) {
+          const { email } = await magic.user.getMetadata();
+          const decentralizedId = await magic.user.getIdToken();
 
-        setUserProfileContext({ decentralizedId, email });
-      }
-      setPageLoading(false);
-    })();
-  }, []);
+          setUserProfileContext({ decentralizedId, email });
+        }
+
+        setPageLoading(false);
+      })();
+    }
+  }, [pageLoading]);
 
   if (pageLoading) {
     return <Loading />;

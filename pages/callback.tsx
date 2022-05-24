@@ -17,7 +17,9 @@ const Callback: NextPage = () => {
 
         if (decentralizedId) {
           router.push(`${backUrl}`);
-        } else throw new Error('User not logged in');
+        } else {
+          throw new Error('User not logged in');
+        }
       } catch (error) {
         console.log('Error: ', error);
         magic.user.logout().catch(console.log);
