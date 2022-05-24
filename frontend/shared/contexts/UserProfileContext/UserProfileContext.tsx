@@ -1,10 +1,20 @@
-import { createContext } from 'react';
+import { Dispatch, createContext, SetStateAction } from 'react';
 
 export interface UserProfile {
   decentralizedId: string | null;
   email?: string | null;
 }
 
-export const UserProfileContext = createContext<UserProfile | undefined>({
-  decentralizedId: null,
+type UserProfileContextType = {
+  profile?: UserProfile;
+  setProfile: Dispatch<SetStateAction<UserProfile | undefined>>;
+};
+
+export const UserProfileContext = createContext<
+  UserProfileContextType | undefined
+>({
+  profile: {
+    decentralizedId: null,
+  },
+  setProfile: () => null,
 });
