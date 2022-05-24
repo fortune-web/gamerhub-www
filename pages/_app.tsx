@@ -13,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../frontend/shared/ui/css/animate.css';
 import '../frontend/shared/ui/css/style.css';
 import '../frontend/shared/ui/css/responsive.css';
+import { UserProfileProvider } from '../frontend/shared/contexts/UserProfileContext/UserProfileProvider';
 
 library.add(
   faBars,
@@ -34,7 +35,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       <meta name="description" content="Multi-chain crypto games aggregator" />
       <title>GamerHub</title>
     </Head>
-    <Component {...pageProps} />
+    <UserProfileProvider>
+      <Component {...pageProps} />
+    </UserProfileProvider>
   </>
 );
 

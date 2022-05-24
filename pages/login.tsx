@@ -4,7 +4,6 @@ import { magic } from '../frontend/lib/magic';
 import { Frame } from '../frontend/core/frame/Frame';
 import { Login } from '../frontend/views/auth/Login/Login';
 import { RootRoutes } from '../frontend/shared/data/routes';
-import { UserProfileProvider } from '../frontend/shared/contexts/UserProfileContext/UserProfileProvider';
 import { useRouter } from 'next/router';
 
 export interface LoginData {
@@ -38,11 +37,9 @@ const LoginPage: NextPage = () => {
   );
 
   return (
-    <UserProfileProvider>
-      <Frame>
-        <Login isDisabled={isLoggingIn} handleLoginClick={login} />
-      </Frame>
-    </UserProfileProvider>
+    <Frame>
+      <Login isDisabled={isLoggingIn} handleLoginClick={login} />
+    </Frame>
   );
 };
 
