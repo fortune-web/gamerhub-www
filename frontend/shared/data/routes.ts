@@ -43,6 +43,18 @@ export const RootRoutes = {
     url: '/explore',
     title: 'Explore Games',
   },
+  exploreTrending: {
+    url: `/explore/trending`,
+    title: 'Explore Trending Games',
+  },
+  exploreNewReleases: {
+    url: `/explore/new-releases`,
+    title: 'Explore Newly Released Games',
+  },
+  exploreMostPopular: {
+    url: `/explore/most-popular`,
+    title: 'Explore Most Popular Games',
+  },
   profile: {
     url: '/profile',
     title: 'Explore Games',
