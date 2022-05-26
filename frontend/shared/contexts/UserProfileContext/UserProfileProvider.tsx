@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from 'react';
 import { UserProfileContext, UserProfile } from './UserProfileContext';
 import { magic } from '../../../lib/magic';
 import { Loading } from '../../ui/components/Loading';
-import { NavMenu, RootRoutes } from '../../data/routes';
+import { RootRoutes } from '../../data/routes';
 import { useRouter } from 'next/router';
 
 export const UserProfileProvider: FC = ({ children }) => {
@@ -28,7 +28,7 @@ export const UserProfileProvider: FC = ({ children }) => {
   }, [pageLoading]);
 
   if (
-    router.asPath === NavMenu.home.url ||
+    /^(\/)(#.*)?$/.exec(router.asPath) !== null ||
     router.asPath === RootRoutes.loginCallback.url
   ) {
     return <>{children}</>;
