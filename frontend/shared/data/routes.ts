@@ -25,7 +25,7 @@ export const NavMenu: Menu = {
     title: 'Roadmap',
   },
   whitepaper: {
-    url: 'https://gamerhub-1.gitbook.io/gamerhub-whitepaper/',
+    url: 'https://gamerhub-1.gitbook.io/gamerhub-whitepaper-v1/',
     title: 'Whitepaper',
   },
 };
