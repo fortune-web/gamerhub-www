@@ -47,7 +47,7 @@ export const Tokenomics = () => {
               </span>
               <span className="text-secondary">
                 <h5 className={styles.tokenomicsTitle}>Public Sale Price </h5> 1
-                GHT = $0.024
+                GHT = $0.022
                 <br />
                 <br />
               </span>
