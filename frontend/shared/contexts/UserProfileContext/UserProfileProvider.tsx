@@ -29,7 +29,7 @@ export const UserProfileProvider: FC = ({ children }) => {
 
   if (
     /^(\/)(#.*)?$/.exec(router.asPath) !== null ||
-    router.asPath === RootRoutes.loginCallback.url
+    router.pathname === RootRoutes.loginCallback.url
   ) {
     return <>{children}</>;
   }
