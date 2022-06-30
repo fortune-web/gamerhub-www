@@ -9,7 +9,7 @@ const Roadmap: NextPage = () => {
       <label className="header3 text-grey-m_4 mb-4">Project Roadmap</label>
       <div>
         <Image
-          src="static/img/roadmap.png"
+          src="/static/img/roadmap.png"
           width="800"
           height="480"
           alt="roadmap"

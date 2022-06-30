@@ -1,0 +1,6 @@
+.nav_link {
+  @apply text-grey-m_3 py-1 px-6 border-primary-main;
+}
+.nav_link_active {
+  @apply border-solid  border-b;
+}

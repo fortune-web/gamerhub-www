@@ -1,29 +1,33 @@
 import { NextPage } from 'next';
 import { Frame } from '../../frontend/core/frame/Frame';
-import { Games } from '../../frontend/views/explore/container/Games/Games';
-import { Segments } from '../../frontend/views/explore/container/Segments/Segments';
 import { useRouter } from 'next/router';
-import { RootRoutes } from '../../frontend/shared/data/routes';
-import { NewReleases } from '../../frontend/views/explore/container/Games/NewReleases';
-import { Trending } from '../../frontend/views/explore/container/Games/Trending';
-import { MostPopular } from '../../frontend/views/explore/container/Games/MostPopular';
+import GamerHubInfo from '../../frontend/views/ido/GamerHubInfo/GamerHubInfo';
+import Tabs from '../../frontend/views/ido/Tabs/Tabs';
 import About from '../../frontend/views/ido/About/About';
 import Roadmap from '../../frontend/views/ido/Roadmap//Roadmap';
+import Tokenomics from '../../frontend/views/ido/Tokenomics/Tokenomics';
+import Team from '../../frontend/views/ido/Team/Team';
+import { TabMenu } from '../../frontend/shared/data/routes';
 
 export const PreIDOPage: NextPage = () => {
   const { asPath: fullPath } = useRouter();
 
-  let GamesToShow = Games;
+  let Content = About;
 
   switch (fullPath) {
-    case RootRoutes.exploreTrending.url:
-      GamesToShow = Trending;
+    case TabMenu.about.url:
+      Content = () => (
+        <>
+          <About />
+          <Roadmap />
+        </>
+      );
       break;
-    case RootRoutes.exploreNewReleases.url:
-      GamesToShow = NewReleases;
+    case TabMenu.tokenomics.url:
+      Content = Tokenomics;
       break;
-    case RootRoutes.exploreMostPopular.url:
-      GamesToShow = MostPopular;
+    case TabMenu.team.url:
+      Content = Team;
       break;
     default:
       break;
@@ -32,9 +36,10 @@ export const PreIDOPage: NextPage = () => {
   return (
     <Frame>
       <div className="bg-grey-bg">
-        <div className="flex flex-col container mx-auto">
-          <About />
-          <Roadmap />
+        <div className="flex flex-col container mx-auto pb-10">
+          <GamerHubInfo />
+          <Tabs />
+          <Content />
         </div>
       </div>
       {/* <GamesToShow /> */}

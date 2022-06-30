@@ -9,13 +9,13 @@ import {
   faTelegram,
   faDiscord,
 } from '@fortawesome/free-brands-svg-icons';
+import 'tailwindcss/tailwind.css';
+import './global.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../frontend/shared/ui/css/animate.css';
 import '../frontend/shared/ui/css/style.css';
 import '../frontend/shared/ui/css/responsive.css';
 import { UserProfileProvider } from '../frontend/shared/contexts/UserProfileContext/UserProfileProvider';
-import 'tailwindcss/tailwind.css';
-import './global.scss';
 
 library.add(
   faBars,

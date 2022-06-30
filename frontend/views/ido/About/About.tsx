@@ -1,5 +1,5 @@
-import styles from './About.module.scss';
 import { NextPage } from 'next';
+import styles from './About.module.scss';
 
 const About: NextPage = () => {
   return (

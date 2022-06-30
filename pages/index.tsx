@@ -9,9 +9,6 @@ import { Tokenomics } from '../frontend/views/home/Tokenomics/Tokenomics';
 const Home: NextPage = () => {
   return (
     <Frame pageType="landing">
-      <div className="">
-        <label className="header3 text-grey-main mt-10">About GamerHub</label>
-      </div>
       <Banner />
       <About />
       <Tokenomics />
