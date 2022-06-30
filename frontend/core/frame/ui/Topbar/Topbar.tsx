@@ -9,6 +9,7 @@ import styles from './Topbar.module.scss';
 import { useState } from 'react';
 import { useWindowScrollPosition } from 'rooks';
 import { PageType } from '../../Frame';
+import WalletConnect from '../WalletConnect/WalletConnect';
 
 interface Props {
   pageType?: PageType;
@@ -85,11 +86,15 @@ export const Topbar = ({ pageType }: Props) => {
                 </Link>
               </li>
             ))}
-            <li className="nav-item">
-              <Link href={RootRoutes.explore.url} passHref>
-                <a className="def-btn">Explore</a>
-              </Link>
-            </li>
+            {pathname === '/pre-ido/purchase' ? (
+              <WalletConnect />
+            ) : (
+              <li className="nav-item">
+                <Link href={RootRoutes.explore.url} passHref>
+                  <a className="def-btn">Explore</a>
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>

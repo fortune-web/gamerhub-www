@@ -1,0 +1,11 @@
+.btn_connect {
+  background: linear-gradient(
+    92.43deg,
+    rgba(255, 255, 255, 0.069) 0.38%,
+    rgba(255, 255, 255, 0.015) 106.95%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  border-radius: 5px;
+  @apply flex items-center justify-center w-48 h-12 text-grey-m_4;
+}

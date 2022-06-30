@@ -71,8 +71,8 @@ const GamerHubInfo: React.FC<IGamerHubInfo> = () => {
               <label className="body1 text-grey-m_4">$5,000</label>
             </div>
           </div>
-          <Link href="/purchase">
-            <button className="btn-primary">Buy GHT</button>
+          <Link href="/pre-ido/purchase">
+            <button className="def-btn">Buy GHT</button>
           </Link>
         </div>
       </div>

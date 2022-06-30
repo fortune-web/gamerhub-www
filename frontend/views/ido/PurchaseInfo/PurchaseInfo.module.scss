@@ -1,0 +1,17 @@
+.gamerHubInfo {
+  @apply flex flex-col items-center text-white container mx-auto mt-12 space-y-4;
+}
+.logo_container {
+  @apply flex justify-center items-center bg-primary-main bg-opacity-20 rounded-full;
+  @apply w-10 h-10 p-1 mr-2.5 sm:w-20 sm:h-20 sm:mr-5;
+}
+.logo_image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+  max-width: 756px;
+}
+.ido_dates {
+  @apply flex space-x-10 sm:space-x-14;
+}
