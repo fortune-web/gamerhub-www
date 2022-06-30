@@ -1,8 +1,9 @@
+import { NextPage } from 'next';
 import Image from 'next/image';
 
 export interface IRoadmap {}
 
-const Roadmap: React.FC<IRoadmap> = () => {
+const Roadmap: NextPage = () => {
   return (
     <div className="mt-12 flex flex-col" id="roadmap">
       <label className="header3 text-grey-m_4 mb-4">Project Roadmap</label>

@@ -31,8 +31,8 @@ export const PreIDOPage: NextPage = () => {
 
   return (
     <Frame>
-      <div className="container bg-grey-bg">
-        <div className="flex container mx-auto">
+      <div className="bg-grey-bg">
+        <div className="flex flex-col container mx-auto">
           <About />
           <Roadmap />
         </div>

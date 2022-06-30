@@ -1,8 +1,7 @@
 import styles from './About.module.scss';
+import { NextPage } from 'next';
 
-export interface IAbout {}
-
-const About: React.FC<IAbout> = () => {
+const About: NextPage = () => {
   return (
     <div className={styles.content} id="about">
       <div className="space-y-4">
