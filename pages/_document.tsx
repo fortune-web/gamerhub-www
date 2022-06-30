@@ -74,6 +74,18 @@ const MyDocument = () => (
       />
       <link rel="icon" type="image/ico" href="/favicon.ico" />
       <link rel="manifest" href="/manifest.json" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Space Grotesk"
+        rel="stylesheet"
+      ></link>
+      <link
+        href="https://fonts.googleapis.com/css?family=DM Sans"
+        rel="stylesheet"
+      ></link>
     </Head>
     <body>
       <Main />

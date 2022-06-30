@@ -59,4 +59,8 @@ export const RootRoutes = {
     url: '/profile',
     title: 'Explore Games',
   },
+  ido: {
+    url: '/pre-ido',
+    title: 'Pre IDO',
+  },
 };

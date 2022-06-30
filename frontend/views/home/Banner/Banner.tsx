@@ -13,7 +13,7 @@ const Banner: NextPage = () => {
           <br />
           <h4>Metaverses . Games . Guilds . NFTs</h4>
 
-          <Link href={RootRoutes.explore.url} passHref>
+          <Link href={RootRoutes.ido.url} passHref>
             <a className="def-btn">Join Pre IDO</a>
           </Link>
         </div>

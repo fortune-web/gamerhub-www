@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 sm:px-7 bg-primary-main rounded text-white text-center;
+  }
+  .header2 {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+  }
+  .header3 {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+  }
+  .body1 {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .body2 {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 600px) {
+    .header2 {
+      font-size: 28px;
+    }
+    .header3 {
+      font-size: 20px;
+    }
+    .body2 {
+      font-size: 14px;
+    }
+  }
+}
