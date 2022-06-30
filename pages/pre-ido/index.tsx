@@ -31,13 +31,11 @@ export const PreIDOPage: NextPage = () => {
 
   return (
     <Frame>
-      <div className="games game-page">
-        <div className="container">
-          <div className="row">
-            <About />
-            <Roadmap />
-            {/* <GamesToShow /> */}
-          </div>
+      <div className="container">
+        <div className="row">
+          <About />
+          <Roadmap />
+          {/* <GamesToShow /> */}
         </div>
       </div>
     </Frame>
