@@ -8,6 +8,7 @@ import { NewReleases } from '../../frontend/views/explore/container/Games/NewRel
 import { Trending } from '../../frontend/views/explore/container/Games/Trending';
 import { MostPopular } from '../../frontend/views/explore/container/Games/MostPopular';
 import About from '../../frontend/views/ido/About/About';
+import Roadmap from '../../frontend/views/ido/Roadmap//Roadmap';
 
 export const PreIDOPage: NextPage = () => {
   const { asPath: fullPath } = useRouter();
@@ -34,6 +35,7 @@ export const PreIDOPage: NextPage = () => {
         <div className="container">
           <div className="row">
             <About />
+            <Roadmap />
             {/* <GamesToShow /> */}
           </div>
         </div>
