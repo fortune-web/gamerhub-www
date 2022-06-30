@@ -34,6 +34,7 @@ module.exports = {
           m_2: '#9EAEC7',
           m_3: '#BEC9DA',
           m_4: '#EFF1F6',
+          bg: '#343333',
         },
         green: {
           main: '#55C388',

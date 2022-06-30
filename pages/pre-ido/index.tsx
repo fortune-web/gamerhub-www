@@ -31,13 +31,13 @@ export const PreIDOPage: NextPage = () => {
 
   return (
     <Frame>
-      <div className="container">
-        <div className="row">
+      <div className="container bg-grey-bg">
+        <div className="flex container mx-auto">
           <About />
           <Roadmap />
-          {/* <GamesToShow /> */}
         </div>
       </div>
+      {/* <GamesToShow /> */}
     </Frame>
   );
 };
