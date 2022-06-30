@@ -9,6 +9,8 @@ import {
   faTelegram,
   faDiscord,
 } from '@fortawesome/free-brands-svg-icons';
+import 'tailwindcss/tailwind.css';
+import './global.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../frontend/shared/ui/css/animate.css';
 import '../frontend/shared/ui/css/style.css';

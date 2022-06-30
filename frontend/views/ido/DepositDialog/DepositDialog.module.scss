@@ -1,0 +1,21 @@
+.deposit_dialog {
+  @apply flex flex-col justify-between rounded-xl px-6 py-8 mx-auto my-10;
+  width: min(100%, 412px);
+  border: 2px solid rgba(215, 0, 123, 0.4);
+  background-color: #242424;
+}
+.input {
+  background: #302f2f;
+  border: 1px solid #5d77a2;
+  border-radius: 5px;
+  padding: 14px;
+  @apply w-full text-grey-main my-2;
+}
+.btn_max {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  @apply text-grey-m_3;
+}

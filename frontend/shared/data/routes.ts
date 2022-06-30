@@ -30,6 +30,21 @@ export const NavMenu: Menu = {
   },
 };
 
+export const TabMenu: Menu = {
+  about: {
+    url: '/pre-ido#about',
+    title: 'About',
+  },
+  tokenomics: {
+    url: '/pre-ido#tokenomics',
+    title: 'Tokenomics',
+  },
+  team: {
+    url: '/pre-ido#team',
+    title: 'Team',
+  },
+};
+
 export const RootRoutes = {
   login: {
     url: '/login',
@@ -58,5 +73,9 @@ export const RootRoutes = {
   profile: {
     url: '/profile',
     title: 'Explore Games',
+  },
+  ido: {
+    url: '/pre-ido',
+    title: 'Pre IDO',
   },
 };

@@ -1,0 +1,35 @@
+.gamerHubInfo {
+  @apply flex flex-col text-white container mx-auto mt-12;
+}
+.logo_container {
+  @apply flex justify-center items-center bg-primary-main bg-opacity-20 rounded-full;
+  @apply w-10 h-10 mr-2.5 sm:w-20 sm:h-20 sm:p-1 sm:mr-5;
+}
+.logo_image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+  max-width: 756px;
+}
+.ido_dates {
+  @apply mt-4 flex space-x-10 sm:space-x-14;
+  margin-left: 100px;
+}
+.back_container {
+  @apply md:col-span-2;
+}
+.back_image {
+  width: 100%;
+}
+.gft_goal {
+  @apply flex flex-col justify-between rounded-xl px-6 py-8;
+  border: 2px solid rgba(215, 0, 123, 0.4);
+  background-color: #242424;
+}
+
+@media screen and (max-width: 600px) {
+  .ido_dates {
+    margin-left: 0px;
+  }
+}

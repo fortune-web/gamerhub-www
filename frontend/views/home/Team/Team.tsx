@@ -20,7 +20,7 @@ const Team: NextPage = () => {
           <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-1">
             <div className="single-member">
               <div className="part-img">
-                <img src="/static/img/team/victor-20220206000508.png" alt="" />
+                <img src="/static/img/team/victor.png" alt="victor" />
               </div>
               <div className="part-text">
                 <span className="name">Victor Kaycee</span>
@@ -31,7 +31,7 @@ const Team: NextPage = () => {
           <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-2">
             <div className="single-member">
               <div className="part-img">
-                <img src="/static/img/team/glory-20220206002811.png" alt="" />
+                <img src="/static/img/team/glory.png" alt="glory" />
               </div>
               <div className="part-text">
                 <span className="name">Glory Lucas</span>
@@ -42,10 +42,7 @@ const Team: NextPage = () => {
           <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-3">
             <div className="single-member">
               <div className="part-img">
-                <img
-                  src="/static/img/team/jeffery-202205130002211.png"
-                  alt=""
-                />
+                <img src="/static/img/team/jeffery.png" alt="jeffery" />
               </div>
               <div className="part-text">
                 <span className="name">Jeffery Pan (SoftBank)</span>
@@ -80,10 +77,7 @@ const Team: NextPage = () => {
           <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-1">
             <div className="single-member">
               <div className="part-img">
-                <img
-                  src="/static/img/team/haseeb-rehman-20220224231036.png"
-                  alt=""
-                />
+                <img src="/static/img/team/haseeb.png" alt="haseeb" />
               </div>
               <div className="part-text">
                 <span className="name">Haseeb Ur Rehman</span>
@@ -94,10 +88,7 @@ const Team: NextPage = () => {
           <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-2">
             <div className="single-member">
               <div className="part-img">
-                <img
-                  src="/static/img/team/rehan-butt-20220224233635.png"
-                  alt=""
-                />
+                <img src="/static/img/team/rehan.png" alt="rehan" />
               </div>
               <div className="part-text">
                 <span className="name">Rehan Butt</span>
@@ -108,10 +99,7 @@ const Team: NextPage = () => {
           <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-3">
             <div className="single-member">
               <div className="part-img">
-                <img
-                  src="/static/img/team/zeeshan-yasin-20220224232822.png"
-                  alt=""
-                />
+                <img src="/static/img/team/zeeshan.png" alt="zeeshan" />
               </div>
               <div className="part-text">
                 <span className="name">Zeeshan Yasin</span>
@@ -124,7 +112,7 @@ const Team: NextPage = () => {
           <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-4">
             <div className="single-member">
               <div className="part-img">
-                <img src="/static/img/team/m-anas-20220224231044.png" alt="" />
+                <img src="/static/img/team/femi.png" alt="femi" />
               </div>
               <div className="part-text">
                 <span className="name">M. Anas</span>
