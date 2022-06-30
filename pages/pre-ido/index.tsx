@@ -16,12 +16,7 @@ export const PreIDOPage: NextPage = () => {
 
   switch (fullPath) {
     case TabMenu.about.url:
-      Content = () => (
-        <>
-          <About />
-          <Roadmap />
-        </>
-      );
+      Content = About;
       break;
     case TabMenu.tokenomics.url:
       Content = Tokenomics;
@@ -42,7 +37,6 @@ export const PreIDOPage: NextPage = () => {
           <Content />
         </div>
       </div>
-      {/* <GamesToShow /> */}
     </Frame>
   );
 };
