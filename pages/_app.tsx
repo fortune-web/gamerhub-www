@@ -15,7 +15,7 @@ import '../frontend/shared/ui/css/style.css';
 import '../frontend/shared/ui/css/responsive.css';
 import { UserProfileProvider } from '../frontend/shared/contexts/UserProfileContext/UserProfileProvider';
 import 'tailwindcss/tailwind.css';
-import './global.css';
+import './global.scss';
 
 library.add(
   faBars,
