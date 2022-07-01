@@ -7,7 +7,9 @@ import { RootRoutes } from '../frontend/shared/data/routes';
 
 const Callback: NextPage = () => {
   const router = useRouter();
+
   const magicCredential = router.query['magic_credential'] as string;
+  const backUrl = (router.query['back'] as string) ?? RootRoutes.explore.url;
 
   useEffect(() => {
     (async () => {
@@ -17,7 +19,7 @@ const Callback: NextPage = () => {
         );
 
         if (decentralizedId) {
-          window.location.assign(RootRoutes.explore.url);
+          window.location.assign(backUrl);
         } else {
           throw new Error('User not logged in');
         }
@@ -27,7 +29,7 @@ const Callback: NextPage = () => {
         window.location.assign(RootRoutes.login.url);
       }
     })();
-  }, [magicCredential]);
+  }, [magicCredential, backUrl]);
 
   return <Loading />;
 };
