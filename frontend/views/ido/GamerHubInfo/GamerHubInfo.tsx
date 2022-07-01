@@ -22,7 +22,9 @@ const GamerHubInfo: React.FC<IGamerHubInfo> = () => {
           </div>
         </div>
         <div className="space-y-1.5 flex flex-col">
-          <label className="header2 text-grey-m_4">GamerHub Token IDO</label>
+          <label className="header2 text-grey-m_4">
+            GamerHub Token Pre IDO
+          </label>
           <label className="body1 text-grey-m_3">
             Multichain Crypto Game Aggregator
           </label>
@@ -30,11 +32,11 @@ const GamerHubInfo: React.FC<IGamerHubInfo> = () => {
       </div>
       <div className={styles.ido_dates}>
         <div className="space-y-2 flex flex-col">
-          <label className="body2 text-grey-m_3">IDO STARTS</label>
+          <label className="body2 text-grey-m_3">Pre IDO STARTS</label>
           <label className="body1 text-grey-m_4">July 1st, 12:00 PM UTC</label>
         </div>
         <div className="space-y-2 flex flex-col">
-          <label className="body2 text-grey-m_3">IDO ENDS</label>
+          <label className="body2 text-grey-m_3">Pre IDO ENDS</label>
           <label className="body1 text-grey-m_4">July 3rd, 12:00 PM UTC</label>
         </div>
       </div>
@@ -50,23 +52,23 @@ const GamerHubInfo: React.FC<IGamerHubInfo> = () => {
           <div className="flex flex-col">
             <label className="body1 text-grey-m_3">Fundraising Goal</label>
             <label className="header3 text-grey-m_4 mb-4">50,000 USD</label>
-            <div className="flex justify-between mb-4">
+            <div className="flex justify-between mb-3">
               <label className="body1 text-grey-m_3">Price Per Token</label>
               <label className="body1 text-grey-m_4">$0.022</label>
             </div>
-            <div className="flex justify-between mb-4">
+            <div className="flex justify-between mb-3">
               <label className="body1 text-grey-m_3">Currencies</label>
               <label className="body1 text-grey-m_4">USDT and BUSD</label>
             </div>
-            <div className="flex justify-between mb-4">
+            <div className="flex justify-between mb-3">
               <label className="body1 text-grey-m_3">Blockchain</label>
               <label className="body1 text-grey-m_4">Binance (BEP20)</label>
             </div>
-            <div className="flex justify-between mb-4">
+            <div className="flex justify-between mb-3">
               <label className="body1 text-grey-m_3">Minimum Allocation</label>
               <label className="body1 text-grey-m_4">$50</label>
             </div>
-            <div className="flex justify-between mb-4">
+            <div className="flex justify-between mb-3">
               <label className="body1 text-grey-m_3">Maximum Allocation</label>
               <label className="body1 text-grey-m_4">$5,000</label>
             </div>

@@ -21,6 +21,7 @@
 }
 .back_image {
   width: 100%;
+  border-radius: 10px;
 }
 .gft_goal {
   @apply flex flex-col justify-between rounded-xl px-6 py-8;
