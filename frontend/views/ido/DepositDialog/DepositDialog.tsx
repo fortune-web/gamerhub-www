@@ -39,7 +39,7 @@ const DepositDialog: React.FC<IDepositDialog> = () => {
       <input type="number" step={0.01} className={styles.input} />
 
       <div className="flex justify-between body1 text-grey-m_3 mb-6 mt-2">
-        Price: $0.0022
+        Price: $0.022
       </div>
 
       {status === 'connected' ? (

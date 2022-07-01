@@ -10,12 +10,15 @@ import {
   faDiscord,
 } from '@fortawesome/free-brands-svg-icons';
 import 'tailwindcss/tailwind.css';
-import './global.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './global.scss';
 import '../frontend/shared/ui/css/animate.css';
 import '../frontend/shared/ui/css/style.css';
 import '../frontend/shared/ui/css/responsive.css';
 import { UserProfileProvider } from '../frontend/shared/contexts/UserProfileContext/UserProfileProvider';
+import * as bsc from '@binance-chain/bsc-use-wallet';
+import { dark, ModalProvider, ResetCSS } from '@pancakeswap-libs/uikit';
+import { ThemeProvider } from 'styled-components';
 
 library.add(
   faBars,
@@ -37,9 +40,22 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       <meta name="description" content="Multi-chain crypto games aggregator" />
       <title>GamerHub</title>
     </Head>
-    <UserProfileProvider>
-      <Component {...pageProps} />
-    </UserProfileProvider>
+    <ThemeProvider theme={dark}>
+      <ResetCSS />
+      <bsc.UseWalletProvider
+        chainId={56}
+        connectors={{
+          walletconnect: { rpcUrl: 'https://bsc-dataseed.binance.org' },
+          bsc,
+        }}
+      >
+        <ModalProvider>
+          <UserProfileProvider>
+            <Component {...pageProps} />
+          </UserProfileProvider>
+        </ModalProvider>
+      </bsc.UseWalletProvider>
+    </ThemeProvider>
   </>
 );
 
