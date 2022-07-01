@@ -27,6 +27,10 @@ export const UserProfileProvider: FC = ({ children }) => {
     }
   }, [pageLoading]);
 
+  if (router.asPath.includes('pre-ido')) {
+    return <>{children}</>;
+  }
+
   if (
     /^(\/)(#.*)?$/.exec(router.asPath) !== null ||
     router.pathname === RootRoutes.loginCallback.url

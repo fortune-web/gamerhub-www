@@ -12,8 +12,14 @@ import BUSDABI from '../../../lib/contracts/busd.json';
 import USDTABI from '../../../lib/contracts/usdt.json';
 import IDOABI from '../../../lib/contracts/ido.json';
 import styles from './DepositDialog.module.scss';
+import { AbiItem } from 'web3-utils';
+import { IContractAddress } from '../../../lib/contracts/interface';
 
-const CHAIN_ID = process.env.CHAINID || 97;
+const CHAIN_ID = process.env.CHAINID || 56;
+const busdAddress = BUSDABI.address[CHAIN_ID as keyof typeof BUSDABI.address];
+const usdtAddress = USDTABI.address[CHAIN_ID as keyof typeof USDTABI.address];
+const idoAddress = IDOABI.address[CHAIN_ID as keyof typeof IDOABI.address];
+
 const enum PurchaseStatus {
   CONNECTED,
   DISCONNECTED,
@@ -45,13 +51,15 @@ const DepositDialog: React.FC<IDepositDialog> = () => {
     if (account && status === 'connected') {
       const web3 = new Web3(ethereum as provider);
       const _contract = new web3.eth.Contract(
-        BUSDABI.abi,
-        BUSDABI.address[CHAIN_ID]
+        BUSDABI.abi as unknown as AbiItem,
+        busdAddress
       );
       _contract.methods
         .balanceOf(account)
         .call()
-        .then((res: number) => setBusdAmount(Web3.utils.fromWei(res, 'ether')));
+        .then((res: string) =>
+          setBusdAmount(parseFloat(Web3.utils.fromWei(res, 'ether')))
+        );
       return _contract;
     }
     return null;
@@ -61,13 +69,15 @@ const DepositDialog: React.FC<IDepositDialog> = () => {
     if (account && status === 'connected') {
       const web3 = new Web3(ethereum as provider);
       const _contract = new web3.eth.Contract(
-        BUSDABI.abi,
-        USDTABI.address[CHAIN_ID]
+        BUSDABI.abi as unknown as AbiItem,
+        usdtAddress
       );
       _contract.methods
         .balanceOf(account)
         .call()
-        .then((res: number) => setUsdtAmount(Web3.utils.fromWei(res, 'ether')));
+        .then((res: string) =>
+          setUsdtAmount(parseFloat(Web3.utils.fromWei(res, 'ether')))
+        );
       return _contract;
     }
     return null;
@@ -77,8 +87,8 @@ const DepositDialog: React.FC<IDepositDialog> = () => {
     if (account && status === 'connected') {
       const web3 = new Web3(ethereum as provider);
       const _contract = new web3.eth.Contract(
-        IDOABI.abi,
-        IDOABI.address[CHAIN_ID]
+        IDOABI.abi as unknown as AbiItem,
+        idoAddress
       );
       return _contract;
     }
@@ -115,32 +125,33 @@ const DepositDialog: React.FC<IDepositDialog> = () => {
   };
 
   const approve = async () => {
-    setPurchaseStatus(PurchaseStatus.PENDING);
-    try {
-      const res = await busdContract.methods
-        .approve(
-          IDOABI.address[CHAIN_ID],
-          Web3.utils.toWei(cashAmount, 'ether')
-        )
-        .send({ from: account });
-      setPurchaseStatus(PurchaseStatus.APPROVED);
-    } catch (err) {
-      setPurchaseStatus(PurchaseStatus.CONNECTED);
+    if (busdContract) {
+      setPurchaseStatus(PurchaseStatus.PENDING);
+      try {
+        const res = await busdContract.methods
+          .approve(idoAddress, Web3.utils.toWei(cashAmount.toString(), 'ether'))
+          .send({ from: account });
+        setPurchaseStatus(PurchaseStatus.APPROVED);
+      } catch (err) {
+        setPurchaseStatus(PurchaseStatus.CONNECTED);
+      }
     }
   };
 
   const purchase = async () => {
-    setPurchaseStatus(PurchaseStatus.PENDING);
-    try {
-      const res = await idoContract.methods
-        .saveFund(
-          BUSDABI.address[CHAIN_ID],
-          Web3.utils.toWei(cashAmount, 'ether')
-        )
-        .send({ from: account });
-      setPurchaseStatus(PurchaseStatus.CONNECTED);
-    } catch (err) {
-      setPurchaseStatus(PurchaseStatus.CONNECTED);
+    if (idoContract) {
+      setPurchaseStatus(PurchaseStatus.PENDING);
+      try {
+        const res = await idoContract.methods
+          .saveFund(
+            busdAddress,
+            Web3.utils.toWei(cashAmount.toString(), 'ether')
+          )
+          .send({ from: account });
+        setPurchaseStatus(PurchaseStatus.CONNECTED);
+      } catch (err) {
+        setPurchaseStatus(PurchaseStatus.CONNECTED);
+      }
     }
   };
 

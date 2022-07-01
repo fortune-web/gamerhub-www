@@ -50,8 +50,9 @@ const GamerHubInfo: React.FC<IGamerHubInfo> = () => {
         </div>
         <div className={styles.gft_goal}>
           <div className="flex flex-col">
-            <label className="body1 text-grey-m_3">Fundraising Goal</label>
-            <label className="header3 text-grey-m_4 mb-4">50,000 USD</label>
+            <label className="body1 text-grey-m_4 mb-4">
+              <big>Join GamerHub Pre IDO</big>
+            </label>
             <div className="flex justify-between mb-3">
               <label className="body1 text-grey-m_3">Price Per Token</label>
               <label className="body1 text-grey-m_4">$0.022</label>

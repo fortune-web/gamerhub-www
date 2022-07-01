@@ -30,6 +30,12 @@ library.add(
   faTelegram
 );
 
+const CHAIN_ID = process.env.CHAINID || 56;
+const rpc =
+  CHAIN_ID === 56
+    ? 'https://bsc-dataseed.binance.org'
+    : 'https://data-seed-prebsc-2-s1.binance.org:8545/';
+
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
@@ -43,9 +49,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
     <ThemeProvider theme={dark}>
       <ResetCSS />
       <bsc.UseWalletProvider
-        chainId={56}
+        chainId={CHAIN_ID as number}
         connectors={{
-          walletconnect: { rpcUrl: 'https://bsc-dataseed.binance.org' },
+          walletconnect: { rpcUrl: rpc },
           bsc,
         }}
       >
