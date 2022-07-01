@@ -1,15 +1,39 @@
+import React, { useEffect, useState, useMemo, Children } from 'react';
 import { useWallet } from '@binance-chain/bsc-use-wallet';
+import Web3 from 'web3';
+import { provider } from 'web3-core';
 import { useWalletModal } from '@pancakeswap-libs/uikit';
 import Image from 'next/image';
 import GHTLogo from '../../../shared/assets/img/logo_2.png';
 import USDT from '../../../shared/assets/img/USDT.png';
+import BUSD from '../../../shared/assets/img/busd.png';
 import ArrowDown from '../../../shared/assets/icon/arrow_down.png';
+import BUSDABI from '../../../lib/contracts/busd.json';
+import USDTABI from '../../../lib/contracts/usdt.json';
+import IDOABI from '../../../lib/contracts/ido.json';
 import styles from './DepositDialog.module.scss';
+
+const CHAIN_ID = process.env.CHAINID || 97;
+const enum PurchaseStatus {
+  CONNECTED,
+  DISCONNECTED,
+  APPROVED,
+  PURCHASED,
+  PENDING,
+}
 
 export interface IDepositDialog {}
 
 const DepositDialog: React.FC<IDepositDialog> = () => {
   const { account, connect, reset, status, ethereum, chainId } = useWallet();
+  const [busdAmount, setBusdAmount] = useState(0);
+  const [usdtAmount, setUsdtAmount] = useState(0);
+  const [ghtAmount, setGhtAmount] = useState(0);
+  const [cashAmount, setCashAmount] = useState(0);
+  const [purchaseStatus, setPurchaseStatus] = useState(
+    PurchaseStatus.DISCONNECTED
+  );
+  const ght_price = 0.022;
 
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(
     (data) => connect(data),
@@ -17,15 +41,125 @@ const DepositDialog: React.FC<IDepositDialog> = () => {
     account || ''
   );
 
+  const busdContract = useMemo(() => {
+    if (account && status === 'connected') {
+      const web3 = new Web3(ethereum as provider);
+      const _contract = new web3.eth.Contract(
+        BUSDABI.abi,
+        BUSDABI.address[CHAIN_ID]
+      );
+      _contract.methods
+        .balanceOf(account)
+        .call()
+        .then((res: number) => setBusdAmount(Web3.utils.fromWei(res, 'ether')));
+      return _contract;
+    }
+    return null;
+  }, [account, status, chainId]);
+
+  const usdtContract = useMemo(() => {
+    if (account && status === 'connected') {
+      const web3 = new Web3(ethereum as provider);
+      const _contract = new web3.eth.Contract(
+        BUSDABI.abi,
+        USDTABI.address[CHAIN_ID]
+      );
+      _contract.methods
+        .balanceOf(account)
+        .call()
+        .then((res: number) => setUsdtAmount(Web3.utils.fromWei(res, 'ether')));
+      return _contract;
+    }
+    return null;
+  }, [account, status, chainId]);
+
+  const idoContract = useMemo(() => {
+    if (account && status === 'connected') {
+      const web3 = new Web3(ethereum as provider);
+      const _contract = new web3.eth.Contract(
+        IDOABI.abi,
+        IDOABI.address[CHAIN_ID]
+      );
+      return _contract;
+    }
+    return null;
+  }, [account, status, chainId]);
+
+  useEffect(() => {
+    if (account && status === 'connected') {
+      console.log(busdAmount);
+    }
+  }, [busdAmount]);
+
+  useEffect(() => {
+    status === 'connected'
+      ? setPurchaseStatus(PurchaseStatus.CONNECTED)
+      : setPurchaseStatus(PurchaseStatus.DISCONNECTED);
+  }, [status, account, chainId]);
+
+  const onChangeGhtAmount = (e: any) => {
+    const _val = e.target.value;
+    setGhtAmount(_val);
+    setCashAmount(_val * ght_price);
+  };
+
+  const onChangeCashAmount = (e: any) => {
+    const _val = e.target.value;
+    setCashAmount(_val);
+    setGhtAmount(_val / ght_price);
+  };
+
+  const setCashMax = () => {
+    setCashAmount(busdAmount);
+    setGhtAmount(busdAmount / ght_price);
+  };
+
+  const approve = async () => {
+    setPurchaseStatus(PurchaseStatus.PENDING);
+    try {
+      const res = await busdContract.methods
+        .approve(
+          IDOABI.address[CHAIN_ID],
+          Web3.utils.toWei(cashAmount, 'ether')
+        )
+        .send({ from: account });
+      setPurchaseStatus(PurchaseStatus.APPROVED);
+    } catch (err) {
+      setPurchaseStatus(PurchaseStatus.CONNECTED);
+    }
+  };
+
+  const purchase = async () => {
+    setPurchaseStatus(PurchaseStatus.PENDING);
+    try {
+      const res = await idoContract.methods
+        .saveFund(
+          BUSDABI.address[CHAIN_ID],
+          Web3.utils.toWei(cashAmount, 'ether')
+        )
+        .send({ from: account });
+      setPurchaseStatus(PurchaseStatus.CONNECTED);
+    } catch (err) {
+      setPurchaseStatus(PurchaseStatus.CONNECTED);
+    }
+  };
+
   return (
     <div className={styles.deposit_dialog}>
       <div className="flex items-center">
-        <Image src={USDT} alt="logo" width={28} height={28} />
-        <label className="body1 text-grey-m_4 ml-2">USDT</label>
+        <Image src={BUSD} alt="logo" width={28} height={28} />
+        <label className="body1 text-grey-m_4 ml-2">BUSD</label>
       </div>
       <div className="relative">
-        <input type="number" step={0.01} className={styles.input} />
-        <button className={styles.btn_max}>Max</button>
+        <input
+          type="number"
+          className={styles.input}
+          value={cashAmount}
+          onChange={onChangeCashAmount}
+        />
+        <button className={styles.btn_max} onClick={setCashMax}>
+          Max
+        </button>
       </div>
 
       <div className="flex justify-center">
@@ -36,17 +170,35 @@ const DepositDialog: React.FC<IDepositDialog> = () => {
         <Image src={GHTLogo} alt="logo" width={28} height={28} />
         <label className="body1 text-grey-m_4 ml-2">GHT</label>
       </div>
-      <input type="number" step={0.01} className={styles.input} />
+      <input
+        type="number"
+        className={styles.input}
+        value={ghtAmount}
+        onChange={onChangeGhtAmount}
+      />
 
       <div className="flex justify-between body1 text-grey-m_3 mb-6 mt-2">
-        Price: $0.022
+        Price: ${ght_price}
       </div>
 
-      {status === 'connected' ? (
-        <button className="def-btn mb-10">Approve</button>
-      ) : (
+      {purchaseStatus === PurchaseStatus.DISCONNECTED && (
         <button className="def-btn mb-10" onClick={onPresentConnectModal}>
           Connect Wallet
+        </button>
+      )}
+      {purchaseStatus === PurchaseStatus.CONNECTED && (
+        <button className="def-btn mb-10" onClick={approve}>
+          Approve
+        </button>
+      )}
+      {purchaseStatus === PurchaseStatus.APPROVED && (
+        <button className="def-btn mb-10" onClick={purchase}>
+          Purchase
+        </button>
+      )}
+      {purchaseStatus === PurchaseStatus.PENDING && (
+        <button className="def-btn mb-10" disabled>
+          Pending
         </button>
       )}
 
