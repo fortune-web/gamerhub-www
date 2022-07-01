@@ -12,8 +12,8 @@ import BUSDABI from '../../../lib/contracts/busd.json';
 import USDTABI from '../../../lib/contracts/usdt.json';
 import IDOABI from '../../../lib/contracts/ido.json';
 import styles from './DepositDialog.module.scss';
+import Dropdown from '../../../shared/assets/icon/dropdown.svg';
 import { AbiItem } from 'web3-utils';
-import { IContractAddress } from '../../../lib/contracts/interface';
 
 const CHAIN_ID = process.env.CHAINID || 56;
 const busdAddress = BUSDABI.address[CHAIN_ID as keyof typeof BUSDABI.address];
@@ -30,12 +30,19 @@ const enum PurchaseStatus {
 
 export interface IDepositDialog {}
 
+const Currencies = [
+  { img: BUSD, label: 'BUSD', value: 'BUSD' },
+  { img: USDT, label: 'USDT', value: 'USDT' },
+];
+
 const DepositDialog: React.FC<IDepositDialog> = () => {
   const { account, connect, reset, status, ethereum, chainId } = useWallet();
   const [busdAmount, setBusdAmount] = useState(0);
   const [usdtAmount, setUsdtAmount] = useState(0);
   const [ghtAmount, setGhtAmount] = useState(0);
   const [cashAmount, setCashAmount] = useState(0);
+  const [selectedCash, setSelectedCash] = useState(Currencies[0]);
+  const [visibleDropDown, setVisibleDropDown] = useState(false);
   const [purchaseStatus, setPurchaseStatus] = useState(
     PurchaseStatus.DISCONNECTED
   );
@@ -96,12 +103,6 @@ const DepositDialog: React.FC<IDepositDialog> = () => {
   }, [account, status, chainId]);
 
   useEffect(() => {
-    if (account && status === 'connected') {
-      console.log(busdAmount);
-    }
-  }, [busdAmount]);
-
-  useEffect(() => {
     status === 'connected'
       ? setPurchaseStatus(PurchaseStatus.CONNECTED)
       : setPurchaseStatus(PurchaseStatus.DISCONNECTED);
@@ -120,15 +121,18 @@ const DepositDialog: React.FC<IDepositDialog> = () => {
   };
 
   const setCashMax = () => {
-    setCashAmount(busdAmount);
-    setGhtAmount(busdAmount / ght_price);
+    const _amount = selectedCash.value === 'BUSD' ? busdAmount : usdtAmount;
+    setCashAmount(_amount);
+    setGhtAmount(_amount / ght_price);
   };
 
   const approve = async () => {
-    if (busdContract) {
+    if (busdContract && usdtContract) {
       setPurchaseStatus(PurchaseStatus.PENDING);
       try {
-        const res = await busdContract.methods
+        const _contract =
+          selectedCash.value === 'BUSD' ? busdContract : usdtContract;
+        const res = await _contract.methods
           .approve(idoAddress, Web3.utils.toWei(cashAmount.toString(), 'ether'))
           .send({ from: account });
         setPurchaseStatus(PurchaseStatus.APPROVED);
@@ -142,11 +146,10 @@ const DepositDialog: React.FC<IDepositDialog> = () => {
     if (idoContract) {
       setPurchaseStatus(PurchaseStatus.PENDING);
       try {
+        const _token =
+          selectedCash.value === 'BUSD' ? busdAddress : usdtAddress;
         const res = await idoContract.methods
-          .saveFund(
-            busdAddress,
-            Web3.utils.toWei(cashAmount.toString(), 'ether')
-          )
+          .saveFund(_token, Web3.utils.toWei(cashAmount.toString(), 'ether'))
           .send({ from: account });
         setPurchaseStatus(PurchaseStatus.CONNECTED);
       } catch (err) {
@@ -157,10 +160,35 @@ const DepositDialog: React.FC<IDepositDialog> = () => {
 
   return (
     <div className={styles.deposit_dialog}>
-      <div className="flex items-center">
-        <Image src={BUSD} alt="logo" width={28} height={28} />
-        <label className="body1 text-grey-m_4 ml-2">BUSD</label>
+      <div className="relative">
+        <button
+          className="flex items-center"
+          onClick={() => setVisibleDropDown(!visibleDropDown)}
+        >
+          <Image src={selectedCash.img} alt="logo" width={28} height={28} />
+          <span className="body1 text-grey-m_4 mx-2">{selectedCash.label}</span>
+          <Image src={Dropdown} alt="" />
+        </button>
+        {visibleDropDown && (
+          <div className="absolute z-10 bg-grey-4 p-2 mt-2 w-fit rounded-md">
+            {Currencies.map((currency) => (
+              <button
+                className="flex items-center my-2 pr-4 hover:bg-grey-m_1 rounded"
+                onClick={() => {
+                  setSelectedCash(currency);
+                  setVisibleDropDown(false);
+                }}
+              >
+                <Image src={currency.img} alt="logo" width={28} height={28} />
+                <span className="body1 text-grey-m_4 ml-2">
+                  {currency.label}
+                </span>
+              </button>
+            ))}
+          </div>
+        )}
       </div>
+
       <div className="relative">
         <input
           type="number"
