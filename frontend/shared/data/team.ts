@@ -1,38 +1,47 @@
 interface TeamMember {
   name: string;
+  role: string;
   image: string;
 }
 export const TeamMembers: TeamMember[] = [
   {
-    name: 'Victor Kaycee (Co-founder/CEO)',
+    name: 'Victor Kaycee',
+    role: 'Co-founder & CEO',
     image: '/static/img/team/victor.png',
   },
   {
-    name: 'Glory Lucas (Co-founder/CMO)',
+    name: 'Glory Lucas',
+    role: 'Co-founder & CMO',
     image: '/static/img/team/glory.png',
   },
   {
-    name: 'Jeffery Pan (Investment Advisor from SoftBank)',
+    name: 'Jeffery Pan',
+    role: 'Investment Advisor from SoftBank',
     image: '/static/img/team/jeffery.png',
   },
   {
-    name: 'Simo Vukmirica (Gaming Advisor)',
+    name: 'Caleb Lucas',
+    role: 'Engineering Manager',
+    image: '/static/img/team/caleb-20220206002729.png',
+  },
+  {
+    name: 'Rex Matthews',
+    role: 'Senior Community Manager',
+    image: '/static/img/team/rex-20220206002749.png',
+  },
+  {
+    name: 'Simo Vukmirica',
+    role: 'Gaming Advisor',
     image: '/static/img/team/simo.png',
   },
   {
-    name: 'Haseeb Ur Rehman (Lead Engineer)',
-    image: '/static/img/team/haseeb.png',
-  },
-  {
-    name: 'Rehan Butt (Blockchain Developer)',
-    image: '/static/img/team/rehan.png',
-  },
-  {
-    name: 'Zeeshan Yasin (Mobile Developer)',
-    image: '/static/img/team/zeeshan.png',
+    name: 'Ken',
+    role: 'Full stack Engineer',
+    image: '/static/img/team/ken.png',
   },
   {
     name: 'Femi Kolade (U.I Designer)',
+    role: 'U.I Designer',
     image: '/static/img/team/femi.png',
   },
 ];

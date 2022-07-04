@@ -20,7 +20,7 @@ const Team: React.FC<ITeam> = () => {
       </div>
       {TeamMembers.map((member, idx) => (
         <div className="space-y-4 mt-8" key={idx}>
-          <label className="body2 text-grey-m_4 uppercase">{member.name}</label>
+          <label className="body2 text-grey-m_4 uppercase">{`${member.name} (${member.role})`}</label>
           <div>
             <Image src={member.image} width="188" height="188" alt="team" />
           </div>
