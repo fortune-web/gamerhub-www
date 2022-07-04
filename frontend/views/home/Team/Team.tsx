@@ -108,14 +108,36 @@ const Team: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center space-x-6">
+          <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-1">
+            <div className="single-member">
+              <div className="part-img">
+                <img src="/static/img/team/simo.png" alt="simo" />
+              </div>
+              <div className="part-text">
+                <span className="name">Simo Vukmirica</span>
+                <span className="position">Gaming Advisor</span>
+              </div>
+            </div>
+          </div>
+          <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-2">
+            <div className="single-member">
+              <div className="part-img">
+                <img src="/static/img/team/ken.png" alt="ken" />
+              </div>
+              <div className="part-text">
+                <span className="name">Ken</span>
+                <span className="position">Full Stack Engineer</span>
+              </div>
+            </div>
+          </div>
           <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-4">
             <div className="single-member">
               <div className="part-img">
                 <img src="/static/img/team/femi.png" alt="femi" />
               </div>
               <div className="part-text">
-                <span className="name">M. Anas</span>
+                <span className="name">Femi Kolade</span>
                 <span className="position">UI Designer</span>
               </div>
             </div>

@@ -36,7 +36,7 @@ export const TeamMembers: TeamMember[] = [
   },
   {
     name: 'Ken',
-    role: 'Full stack Engineer',
+    role: 'Full Stack Engineer',
     image: '/static/img/team/ken.png',
   },
   {
