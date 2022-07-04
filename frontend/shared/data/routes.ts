@@ -32,15 +32,15 @@ export const NavMenu: Menu = {
 
 export const TabMenu: Menu = {
   about: {
-    url: '/pre-ido#about',
+    url: '/token-sale#about',
     title: 'About',
   },
   tokenomics: {
-    url: '/pre-ido#tokenomics',
+    url: '/token-sale#tokenomics',
     title: 'Tokenomics',
   },
   team: {
-    url: '/pre-ido#team',
+    url: '/token-sale#team',
     title: 'Team',
   },
 };
@@ -74,8 +74,8 @@ export const RootRoutes = {
     url: '/profile',
     title: 'Explore Games',
   },
-  ido: {
-    url: '/pre-ido',
-    title: 'Pre IDO',
+  sale: {
+    url: '/token-sale',
+    title: 'Token Sale',
   },
 };

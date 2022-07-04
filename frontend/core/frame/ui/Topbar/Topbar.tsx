@@ -102,7 +102,7 @@ export const Topbar = ({ pageType }: Props) => {
                   </Link>
                 </li>
               ))}
-              {pathname === '/pre-ido/purchase' ? (
+              {pathname === '/token-sale/purchase' ? (
                 <div className="hidden md:flex">
                   <WalletConnect />
                 </div>

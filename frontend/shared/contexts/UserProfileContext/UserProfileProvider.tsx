@@ -27,7 +27,7 @@ export const UserProfileProvider: FC = ({ children }) => {
     }
   }, [pageLoading]);
 
-  if (router.asPath.includes('pre-ido')) {
+  if (router.asPath.includes('token-sale')) {
     return <>{children}</>;
   }
 

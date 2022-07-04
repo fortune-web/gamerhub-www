@@ -22,15 +22,13 @@ const GamerHubInfo: React.FC<IGamerHubInfo> = () => {
           </div>
         </div>
         <div className="space-y-1.5 flex flex-col">
-          <label className="header2 text-grey-m_4">
-            GamerHub Token Pre IDO
-          </label>
+          <label className="header2 text-grey-m_4">GamerHub Token Sale</label>
           <label className="body1 text-grey-m_3">
             Multichain Crypto Game Aggregator
           </label>
         </div>
       </div>
-      <div className={styles.ido_dates}>
+      {/* <div className={styles.ido_dates}>
         <div className="space-y-2 flex flex-col">
           <label className="body2 text-grey-m_3">Pre IDO STARTS</label>
           <label className="body1 text-grey-m_4">July 1st, 12:00 PM UTC</label>
@@ -39,7 +37,7 @@ const GamerHubInfo: React.FC<IGamerHubInfo> = () => {
           <label className="body2 text-grey-m_3">Pre IDO ENDS</label>
           <label className="body1 text-grey-m_4">July 3rd, 12:00 PM UTC</label>
         </div>
-      </div>
+      </div> */}
       <div className="my-6 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
         <div className={styles.back_container}>
           <img
@@ -51,7 +49,7 @@ const GamerHubInfo: React.FC<IGamerHubInfo> = () => {
         <div className={styles.gft_goal}>
           <div className="flex flex-col">
             <label className="body1 text-grey-m_4 mb-4">
-              <big>Join GamerHub Pre IDO</big>
+              <big>Join GamerHub Token Sale</big>
             </label>
             <div className="flex justify-between mb-3">
               <label className="body1 text-grey-m_3">Price Per Token</label>
@@ -74,7 +72,7 @@ const GamerHubInfo: React.FC<IGamerHubInfo> = () => {
               <label className="body1 text-grey-m_4">$5,000</label>
             </div>
           </div>
-          <Link href="/pre-ido/purchase">
+          <Link href="/token-sale/purchase">
             <button className="def-btn">Buy GHT</button>
           </Link>
         </div>
