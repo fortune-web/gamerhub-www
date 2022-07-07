@@ -2791,6 +2791,7 @@ ul {
 .team .single-member .part-img {
   background: url(../../assets/img/breadcrumb-bg.jpg) 25% center no-repeat;
   background-size: cover;
+  height: 245px;
 }
 .team .single-member .part-img img {
   padding: 30px;

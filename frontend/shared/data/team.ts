@@ -40,6 +40,11 @@ export const TeamMembers: TeamMember[] = [
     image: '/static/img/team/pekka.png',
   },
   {
+    name: 'Robby Jeo',
+    role: 'Polygon Advisor',
+    image: '/static/img/team/robby.png',
+  },
+  {
     name: 'Ken Suzuki',
     role: 'Full Stack Engineer',
     image: '/static/img/team/ken.png',

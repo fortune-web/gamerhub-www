@@ -16,7 +16,7 @@ const Team: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row justify-center">
           {TeamMembers.map((member) => (
             <div className="col-xl-3 col-lg-3 col-sm-6 mb-3 team-1">
               <div className="single-member">
