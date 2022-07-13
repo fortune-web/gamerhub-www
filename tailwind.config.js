@@ -42,6 +42,10 @@ module.exports = {
         red: {
           main: '#D73333',
         },
+        bg: {
+          main: '#00113C',
+          main_nav: '#060D33',
+        },
       },
       fontSize: {
         56: '56px',

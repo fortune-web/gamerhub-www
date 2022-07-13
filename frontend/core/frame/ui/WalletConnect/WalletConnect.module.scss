@@ -7,5 +7,5 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(24px);
   border-radius: 5px;
-  @apply flex items-center justify-center w-48 h-12 text-grey-m_4;
+  @apply flex items-center justify-center w-12 sm:w-48 h-12 mr-3 text-grey-m_4;
 }

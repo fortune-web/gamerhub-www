@@ -1,0 +1,19 @@
+.nav_menu {
+  @apply flex flex-col items-start p-4 bg-bg-main_nav;
+  width: 264px;
+}
+.nav_item {
+  @apply flex items-center px-4 py-2 text-grey-m_3 space-x-4 cursor-pointer;
+  border: 1px solid transparent;
+}
+.nav_item:hover {
+  background: linear-gradient(
+    92.85deg,
+    rgba(255, 255, 255, 0.2) 0.38%,
+    rgba(239, 241, 246, 0) 144.37%
+  );
+  opacity: 0.8;
+  border: 1px solid rgba(239, 241, 246, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+}

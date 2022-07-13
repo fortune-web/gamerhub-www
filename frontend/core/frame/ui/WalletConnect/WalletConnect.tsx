@@ -21,13 +21,15 @@ const WalletConnect: React.FC<IWalletConnect> = () => {
     <div>
       {status === 'connected' ? (
         <button onClick={onPresentAccountModal} className={styles.btn_connect}>
-          {sortAddress(account || '')}
+          <Image src={Wallet} />
+          <span className="hidden sm:block">{sortAddress(account || '')}</span>
         </button>
       ) : (
         <button className={styles.btn_connect} onClick={onPresentConnectModal}>
           <Image src={Wallet} />
-          <span className="mx-2">Connect Wallet</span>
-          <Image src={Dropdown} />
+          <div className="hidden sm:block">
+            <span className="mx-2">Connect Wallet</span>
+          </div>
         </button>
       )}
     </div>

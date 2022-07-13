@@ -28,8 +28,23 @@
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
   }
+  .caption1 {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .caption2 {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
   @media screen and (max-width: 600px) {
     .header2 {
       font-size: 28px;
