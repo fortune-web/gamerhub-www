@@ -22,6 +22,7 @@ import { ThemeProvider } from 'styled-components';
 import { Web3ReactProvider } from '@web3-react/core';
 import { ethers } from 'ethers';
 import { provider as ProviderType } from 'web3-core';
+import { NextPageWithLayout } from './page';
 
 library.add(
   faBars,
@@ -44,35 +45,45 @@ const getLibrary = (provider: any) => {
   return library;
 };
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <>
-    <Head>
-      <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Multi-chain crypto games aggregator" />
-      <title>GamerHub</title>
-    </Head>
-    <ThemeProvider theme={dark}>
-      <ResetCSS />
-      <bsc.UseWalletProvider
-        chainId={CHAIN_ID as number}
-        connectors={{
-          walletconnect: { rpcUrl: rpc },
-          bsc,
-        }}
-      >
-        <Web3ReactProvider getLibrary={getLibrary}>
-          <ModalProvider>
-            <UserProfileProvider>
-              <Component {...pageProps} />
-            </UserProfileProvider>
-          </ModalProvider>
-        </Web3ReactProvider>
-      </bsc.UseWalletProvider>
-    </ThemeProvider>
-  </>
-);
+interface AppPropsWithLayout extends AppProps {
+  Component: NextPageWithLayout;
+}
+
+const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const getLayout = Component.getLayout || ((page) => page);
+  return (
+    <>
+      <Head>
+        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Multi-chain crypto games aggregator"
+        />
+        <title>GamerHub</title>
+      </Head>
+      <ThemeProvider theme={dark}>
+        <ResetCSS />
+        <bsc.UseWalletProvider
+          chainId={CHAIN_ID as number}
+          connectors={{
+            walletconnect: { rpcUrl: rpc },
+            bsc,
+          }}
+        >
+          <Web3ReactProvider getLibrary={getLibrary}>
+            <ModalProvider>
+              <UserProfileProvider>
+                {getLayout(<Component {...pageProps} />)}
+              </UserProfileProvider>
+            </ModalProvider>
+          </Web3ReactProvider>
+        </bsc.UseWalletProvider>
+      </ThemeProvider>
+    </>
+  );
+};
 
 export default MyApp;

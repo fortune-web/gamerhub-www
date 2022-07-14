@@ -18,16 +18,16 @@ import styles from './NavMenu.module.scss';
 export interface INavMenu {}
 
 const NavMenuItems = [
-  { title: 'Home', link: '/', icon: Home },
-  { title: 'Games', link: '/', icon: Gamehub },
-  { title: 'Wallet', link: '/', icon: Wallet },
-  { title: 'GameFi', link: '/', icon: GameFi },
-  { title: 'NFTs', link: '/', icon: NFTs },
-  { title: 'Marketplace', link: '/', icon: Market },
-  { title: 'GamerStream', link: '/', icon: Stream },
-  { title: 'GamerPlay', link: '/', icon: GameHub },
-  { title: 'GamerMerch', link: '/', icon: Merch },
-  { title: 'Settings', link: '/', icon: Settings },
+  { title: 'Home', link: '/main', icon: Home },
+  { title: 'Games', link: '/main/games', icon: Gamehub },
+  { title: 'Wallet', link: '/main', icon: Wallet },
+  { title: 'GameFi', link: '/main', icon: GameFi },
+  { title: 'NFTs', link: '/main', icon: NFTs },
+  { title: 'Marketplace', link: '/main', icon: Market },
+  { title: 'GamerStream', link: '/main', icon: Stream },
+  { title: 'GamerPlay', link: '/main', icon: GameHub },
+  { title: 'GamerMerch', link: '/main', icon: Merch },
+  { title: 'Settings', link: '/main', icon: Settings },
 ];
 
 const NavMenu: React.FC<INavMenu> = () => {
@@ -42,10 +42,12 @@ const NavMenu: React.FC<INavMenu> = () => {
       </div>
       <div className="flex flex-col space-y-4 mt-4">
         {NavMenuItems.map((item) => (
-          <div className={styles.nav_item}>
-            <Image src={item.icon} alt="Wallet" />
-            <span>{item.title}</span>
-          </div>
+          <Link href={item.link} passHref>
+            <div className={styles.nav_item}>
+              <Image src={item.icon} alt="Wallet" />
+              <span>{item.title}</span>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
