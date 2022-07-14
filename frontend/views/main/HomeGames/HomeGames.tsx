@@ -11,6 +11,7 @@ import twilight from '../../../shared/assets/img/twilight.png';
 import metashooter from '../../../shared/assets/img/metashooter.png';
 import horizonmetaverse from '../../../shared/assets/img/horizonmetaverse.png';
 import cybermetaverse from '../../../shared/assets/img/cybermetaverse.png';
+import Ikonmarketplace from '../../../shared/assets/img/Ikonmarketplace.png';
 import classNames from 'classnames';
 
 const homeGames = [
@@ -87,6 +88,36 @@ const homeGames = [
       },
     ],
   },
+  {
+    title: 'NFT Marketplaces',
+    link: '#',
+    content: [
+      {
+        imageSrc: Ikonmarketplace,
+        title: 'Ikon Marketplace',
+        ctaLink: '#',
+        ctaText: 'Learn More',
+      },
+      {
+        imageSrc: Ikonmarketplace,
+        title: 'Ikon Marketplace',
+        ctaLink: '#',
+        ctaText: 'Learn More',
+      },
+      {
+        imageSrc: Ikonmarketplace,
+        title: 'Ikon Marketplace',
+        ctaLink: '#',
+        ctaText: 'Learn More',
+      },
+      {
+        imageSrc: Ikonmarketplace,
+        title: 'Ikon Marketplace',
+        ctaLink: '#',
+        ctaText: 'Learn More',
+      },
+    ],
+  },
 ];
 
 const HomeGames: React.FC = () => {
@@ -117,7 +148,12 @@ const HomeGames: React.FC = () => {
                       styles.gameImageContainer
                     )}
                   >
-                    <Image src={each.imageSrc} alt={each.title} />
+                    <Image
+                      src={each.imageSrc}
+                      alt={each.title}
+                      width={500}
+                      height={500}
+                    />
                   </div>
                   <div className={styles.part_text}>
                     <h4 className={styles.game_title}>{each.title}</h4>

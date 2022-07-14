@@ -2,7 +2,6 @@ import { useWallet } from '@binance-chain/bsc-use-wallet';
 import { useWalletModal } from '@pancakeswap-libs/uikit';
 import { sortAddress } from '../../../../lib/utils';
 import Image from 'next/image';
-import Dropdown from '../../../../shared/assets/icon/dropdown.svg';
 import Wallet from '../../../../shared/assets/icon/wallet.svg';
 import styles from './WalletConnect.module.scss';
 
