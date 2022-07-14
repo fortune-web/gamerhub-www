@@ -19,6 +19,9 @@ import { UserProfileProvider } from '../frontend/shared/contexts/UserProfileCont
 import * as bsc from '@binance-chain/bsc-use-wallet';
 import { dark, ModalProvider, ResetCSS } from '@pancakeswap-libs/uikit';
 import { ThemeProvider } from 'styled-components';
+import { Web3ReactProvider } from '@web3-react/core';
+import { ethers } from 'ethers';
+import { provider as ProviderType } from 'web3-core';
 
 library.add(
   faBars,
@@ -35,6 +38,11 @@ const rpc =
   CHAIN_ID === 56
     ? 'https://bsc-dataseed.binance.org'
     : 'https://data-seed-prebsc-2-s1.binance.org:8545/';
+
+const getLibrary = (provider: any) => {
+  const library = new ethers.providers.Web3Provider(provider);
+  return library;
+};
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
@@ -55,11 +63,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
           bsc,
         }}
       >
-        <ModalProvider>
-          <UserProfileProvider>
-            <Component {...pageProps} />
-          </UserProfileProvider>
-        </ModalProvider>
+        <Web3ReactProvider getLibrary={getLibrary}>
+          <ModalProvider>
+            <UserProfileProvider>
+              <Component {...pageProps} />
+            </UserProfileProvider>
+          </ModalProvider>
+        </Web3ReactProvider>
       </bsc.UseWalletProvider>
     </ThemeProvider>
   </>

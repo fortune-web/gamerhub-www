@@ -28,7 +28,7 @@ const WalletConnect: React.FC<IWalletConnect> = () => {
         <button className={styles.btn_connect} onClick={onPresentConnectModal}>
           <Image src={Wallet} />
           <div className="hidden sm:block">
-            <span className="mx-2">Connect Wallet</span>
+            <span>Connect Wallet</span>
           </div>
         </button>
       )}
