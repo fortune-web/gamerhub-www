@@ -117,7 +117,12 @@ const HomeGames: React.FC = () => {
                       styles.gameImageContainer
                     )}
                   >
-                    <Image src={each.imageSrc} alt={each.title} />
+                    <Image
+                      src={each.imageSrc}
+                      alt={each.title}
+                      width={500}
+                      height={500}
+                    />
                   </div>
                   <div className={styles.part_text}>
                     <h4 className={styles.game_title}>{each.title}</h4>
