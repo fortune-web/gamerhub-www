@@ -1,14 +1,14 @@
-import Image from 'next/image';
-import GamerHub from '../../../shared/assets/img/gamerhub-bg-main.png';
-import RecentlyBG from '../../../shared/assets/img/recently-bg.png';
-import styles from './HomeSlider.module.scss';
+import React from 'react';
 import ReactPlayer from 'react-player';
+import styles from './HomeSlider.module.scss';
 
 const HomeSlider: React.FC = () => {
   return (
     <div className="flex justify-between">
-      <img
-        src="/static/img/gamerhub-bg-main2.png"
+      <video
+        src="/static/homevideo.mp4"
+        autoPlay
+        loop
         className={styles.slider_img}
       />
     </div>
