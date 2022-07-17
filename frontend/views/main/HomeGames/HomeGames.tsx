@@ -76,13 +76,13 @@ const homeGames = [
     content: [
       {
         imageSrc: horizonmetaverse,
-        title: 'Horizon Land Metaverse',
+        title: 'Horizon Land',
         ctaLink: '#',
         ctaText: 'Learn More',
       },
       {
         imageSrc: cybermetaverse,
-        title: 'Cyber Metaverse',
+        title: 'Cyber',
         ctaLink: '#',
         ctaText: 'Learn More',
       },
@@ -141,7 +141,7 @@ const HomeGames: React.FC = () => {
           <div className="mt-6">
             <div className="grid grid-cols-4 gap-x-8 gap-y-6">
               {each.content.map((each) => (
-                <div className={styles.single_game}>
+                <div className={styles.each_game}>
                   <div
                     className={classNames(
                       styles.part_img,
@@ -155,14 +155,16 @@ const HomeGames: React.FC = () => {
                       height={500}
                     />
                   </div>
-                  <div className={styles.part_text}>
-                    <h4 className={styles.game_title}>{each.title}</h4>
-                    <a
-                      href={each.ctaLink}
-                      className={classNames(styles.def_btn, styles.def_small)}
-                    >
-                      {each.ctaText}
-                    </a>
+                  <div className={styles.game_btn}>
+                    <h4 className="header6 text-white">{each.title}</h4>
+                    <button className={styles.play_btn}>
+                      <a
+                        href={each.ctaLink}
+                        className="body1 text-15 text-grey-m_4"
+                      >
+                        {each.ctaText}
+                      </a>
+                    </button>
                   </div>
                 </div>
               ))}

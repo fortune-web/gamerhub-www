@@ -78,13 +78,13 @@ const allGames = [
 const Metaverse = [
   {
     imageSrc: horizonmetaverse,
-    title: 'Horizon Land Metaverse',
+    title: 'Horizon Land',
     ctaLink: '#',
     ctaText: 'Learn More',
   },
   {
     imageSrc: cybermetaverse,
-    title: 'Cyber Metaverse',
+    title: 'Cyber',
     ctaLink: '#',
     ctaText: 'Learn More',
   },
@@ -119,7 +119,7 @@ const Games: React.FC = () => {
       <div className="mt-8">
         <div className="grid grid-cols-4 gap-8">
           {allGames.map((each) => (
-            <div className={styles.single_game}>
+            <div className={styles.each_game}>
               <div
                 className={classNames(
                   styles.part_img,
@@ -133,14 +133,16 @@ const Games: React.FC = () => {
                   height={500}
                 />
               </div>
-              <div className={styles.part_text}>
-                <h4 className={styles.game_title}>{each.title}</h4>
-                <a
-                  href={each.ctaLink}
-                  className={classNames(styles.def_btn, styles.def_small)}
-                >
-                  {each.ctaText}
-                </a>
+              <div className={styles.game_btn}>
+                <h4 className="header6 text-white">{each.title}</h4>
+                <button className={styles.play_btn}>
+                  <a
+                    href={each.ctaLink}
+                    className="body1 text-15 text-grey-m_4"
+                  >
+                    {each.ctaText}
+                  </a>
+                </button>
               </div>
             </div>
           ))}
@@ -152,7 +154,7 @@ const Games: React.FC = () => {
       <div className="mt-8">
         <div className="grid grid-cols-4 gap-8">
           {Metaverse.map((each) => (
-            <div className={styles.single_game}>
+            <div className={styles.each_game}>
               <div
                 className={classNames(
                   styles.part_img,
@@ -166,14 +168,16 @@ const Games: React.FC = () => {
                   height={500}
                 />
               </div>
-              <div className={styles.part_text}>
-                <h4 className={styles.game_title}>{each.title}</h4>
-                <a
-                  href={each.ctaLink}
-                  className={classNames(styles.def_btn, styles.def_small)}
-                >
-                  {each.ctaText}
-                </a>
+              <div className={styles.game_btn}>
+                <h4 className="header6 text-white">{each.title}</h4>
+                <button className={styles.play_btn}>
+                  <a
+                    href={each.ctaLink}
+                    className="body1 text-15 text-grey-m_4"
+                  >
+                    {each.ctaText}
+                  </a>
+                </button>
               </div>
             </div>
           ))}

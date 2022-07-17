@@ -10,11 +10,9 @@ const MainApplicationLayout: React.FC<IMainApplicationLayout> = ({
   return (
     <div className="bg-bg-main min-h-screen flex">
       <NavMenu />
-      <div className="w-full ml-72">
-        <div className="container mx-auto">
-          <AppBar />
-          <div>{children}</div>
-        </div>
+      <div className="w-full px-8 ml-72">
+        <AppBar />
+        <div>{children}</div>
       </div>
     </div>
   );

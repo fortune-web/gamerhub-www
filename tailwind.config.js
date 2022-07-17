@@ -51,9 +51,14 @@ module.exports = {
         56: '56px',
         42: '42px',
         32: '32px',
+        15: '15px',
       },
       fontFamily: {
         sans: ['DM Sans', 'sans-serif'],
+      },
+      inset: {
+        350: '350px',
+        400: '400px',
       },
     },
   },
