@@ -33,14 +33,14 @@ const NavMenuItems = [
 const NavMenu: React.FC<INavMenu> = () => {
   return (
     <div className={styles.nav_menu}>
-      <div className="navbar-brand m-0">
+      <div className="navbar-brand mb-12 ml-3">
         <Link href={menu.home.url} passHref>
           <a>
             <Image src={logo} alt="LOGO" width={190} height={30} />
           </a>
         </Link>
       </div>
-      <div className="flex flex-col space-y-4 mt-4">
+      <div className="flex flex-col m-2">
         {NavMenuItems.map((item) => (
           <Link href={item.link} passHref>
             <div className={styles.nav_item}>
