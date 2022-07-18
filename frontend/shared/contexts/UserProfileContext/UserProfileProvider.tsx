@@ -27,7 +27,7 @@ export const UserProfileProvider: FC = ({ children }) => {
     }
   }, [pageLoading]);
 
-  if (router.asPath.includes('token-sale')) {
+  if (!router.asPath.includes('explorer')) {
     return <>{children}</>;
   }
 

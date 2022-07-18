@@ -19,6 +19,10 @@ import { UserProfileProvider } from '../frontend/shared/contexts/UserProfileCont
 import * as bsc from '@binance-chain/bsc-use-wallet';
 import { dark, ModalProvider, ResetCSS } from '@pancakeswap-libs/uikit';
 import { ThemeProvider } from 'styled-components';
+import { Web3ReactProvider } from '@web3-react/core';
+import { ethers } from 'ethers';
+import { provider as ProviderType } from 'web3-core';
+import { NextPageWithLayout } from './page';
 
 library.add(
   faBars,
@@ -36,33 +40,50 @@ const rpc =
     ? 'https://bsc-dataseed.binance.org'
     : 'https://data-seed-prebsc-2-s1.binance.org:8545/';
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <>
-    <Head>
-      <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Multi-chain crypto games aggregator" />
-      <title>GamerHub</title>
-    </Head>
-    <ThemeProvider theme={dark}>
-      <ResetCSS />
-      <bsc.UseWalletProvider
-        chainId={CHAIN_ID as number}
-        connectors={{
-          walletconnect: { rpcUrl: rpc },
-          bsc,
-        }}
-      >
-        <ModalProvider>
-          <UserProfileProvider>
-            <Component {...pageProps} />
-          </UserProfileProvider>
-        </ModalProvider>
-      </bsc.UseWalletProvider>
-    </ThemeProvider>
-  </>
-);
+const getLibrary = (provider: any) => {
+  const library = new ethers.providers.Web3Provider(provider);
+  return library;
+};
+
+interface AppPropsWithLayout extends AppProps {
+  Component: NextPageWithLayout;
+}
+
+const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const getLayout = Component.getLayout || ((page) => page);
+  return (
+    <>
+      <Head>
+        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Multi-chain crypto games aggregator"
+        />
+        <title>GamerHub</title>
+      </Head>
+      <ThemeProvider theme={dark}>
+        <ResetCSS />
+        <bsc.UseWalletProvider
+          chainId={CHAIN_ID as number}
+          connectors={{
+            walletconnect: { rpcUrl: rpc },
+            bsc,
+          }}
+        >
+          <Web3ReactProvider getLibrary={getLibrary}>
+            <ModalProvider>
+              <UserProfileProvider>
+                {getLayout(<Component {...pageProps} />)}
+              </UserProfileProvider>
+            </ModalProvider>
+          </Web3ReactProvider>
+        </bsc.UseWalletProvider>
+      </ThemeProvider>
+    </>
+  );
+};
 
 export default MyApp;

@@ -8,7 +8,8 @@ export const Games = () => {
         allGames.slice(0, 3),
         allGames.slice(3, 6),
         allGames.slice(6, 9),
-        allGames.slice(9),
+        allGames.slice(9, 12),
+        allGames.slice(12),
       ]}
     />
   );

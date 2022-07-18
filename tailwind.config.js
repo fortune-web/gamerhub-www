@@ -42,14 +42,23 @@ module.exports = {
         red: {
           main: '#D73333',
         },
+        bg: {
+          main: '#00113C',
+          main_nav: '#060D33',
+        },
       },
       fontSize: {
         56: '56px',
         42: '42px',
         32: '32px',
+        15: '15px',
       },
       fontFamily: {
         sans: ['DM Sans', 'sans-serif'],
+      },
+      inset: {
+        350: '350px',
+        400: '400px',
       },
     },
   },

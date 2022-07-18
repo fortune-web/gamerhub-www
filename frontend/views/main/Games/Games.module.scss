@@ -1,0 +1,55 @@
+.button_group {
+  background-image: url('../../../shared/assets/icon/gamebtn.png');
+  background-size: 100% 100%;
+  backdrop-filter: blur(30px);
+}
+.button_group:hover {
+  background-image: url('../../../shared/assets/icon/gamebtnhover.png');
+  background-size: 100% 100%;
+  backdrop-filter: blur(30px);
+}
+.button_text {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  @apply text-grey-m_4;
+}
+.button_filter {
+  background: linear-gradient(
+    92.43deg,
+    rgba(255, 255, 255, 0.12) 0.38%,
+    rgba(255, 255, 255, 0.05) 106.95%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  border-radius: 5px;
+  @apply flex items-center justify-center w-12 sm:w-40 h-12 mr-11 text-white;
+}
+.gameImageContainer {
+  > span {
+    display: block !important;
+  }
+}
+.part_img {
+  width: 100%;
+  opacity: 0.8;
+}
+.play_btn {
+  background-image: url('../../../shared/assets/icon/buttonIcon.png');
+  background-size: 100% 100%;
+  @apply pl-4 pr-4 py-3 mt-2;
+}
+.each_game {
+  @apply relative;
+}
+.game_btn {
+  @apply bottom-10 left-5 absolute opacity-0;
+}
+.each_game:hover .game_btn {
+  @apply opacity-100;
+}

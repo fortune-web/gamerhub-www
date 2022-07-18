@@ -8,68 +8,101 @@ import HorizonLand from '../assets/img/HorizonLand.png';
 import SwiftShootout from '../assets/img/SwiftShootout.jpg';
 import Ikonic from '../assets/img/Ikonic.png';
 import MetaShooter from '../assets/img/MetaShooter.png';
+import BlackwaterThumbnail from '../assets/img/BlackwaterThumbnail.jpg';
+import Ookeenga from '../assets/img/Ookeenga.png';
+import Revoland from '../assets/img/Revoland.png';
+import Thumbnail_Pixel_Hub from '../assets/img/Thumbnail_Pixel_Hub.png';
+import Thumbnail_TauntBattleworld from '../assets/img/Thumbnail_TauntBattleworld.png';
 
 export const allGames = [
   {
     imageSrc: Warhands,
     title: 'WarHands NFT',
     ctaLink: 'https://bit.ly/3yj72HS',
-    ctaText: 'Play Now',
+    ctaText: 'Play Demo',
   },
   {
     imageSrc: MetaMoba,
     title: 'Meta Moba',
-    ctaLink:
-      'https://play.google.com/apps/test/RQPfvpaiK-o/ahAIGJVrfT42zmnBb2u8J7oRp3Mt1kbWb-INihTvYEQynogGKVNRy23UIt5AgPhCSwtjFWxW_fJF3HpVmtebgEpUau',
-    ctaText: 'Play Now',
+    ctaLink: 'https://metamoba.io/',
+    ctaText: 'View Game',
   },
   {
     imageSrc: CyberPop,
     title: 'Cyberpop Metaverse',
-    ctaLink:
-      'https://zengeon-cos-assets-1259788321.cos.ap-shanghai.myqcloud.com/PrinceOfPersia/Jenkins/AppFiles/Cyberpop_1.0.0_2022_04_27_23_38_36_V25_Dev.false_Symbols.AWS@USE_NFT_ASSETS.apk',
-    ctaText: 'Play Now',
+    ctaLink: 'https://www.cyberpop.online/',
+    ctaText: 'Play Demo',
   },
   {
     imageSrc: Twilight,
     title: 'Twilight',
     ctaLink: 'https://twilightgame.io/gamebeta_v5/index.html',
-    ctaText: 'Play Now',
+    ctaText: 'Play Game',
   },
   {
     imageSrc: SwiftShootout,
     title: 'Swift Shootout',
-    ctaLink: 'https://www.swiftshootout.com/demo',
-    ctaText: 'Play Now',
+    ctaLink: 'https://www.swiftshootout.com/#gameplay',
+    ctaText: 'View Game',
   },
   {
     imageSrc: HorizonLand,
     title: 'Horizon Land',
-    ctaLink: 'https://www.swiftshootout.com/demo',
-    ctaText: 'Play Now',
+    ctaLink: 'https://horizonland.app/',
+    ctaText: 'View Game',
   },
   {
     imageSrc: PiratesLand,
     title: 'Pirates Land',
-    ctaLink: 'https://twitter.com/PiratesLandio',
-    ctaText: 'Learn More',
+    ctaLink: 'https://piratesland.io/',
+    ctaText: 'View Game',
   },
   {
     imageSrc: Abeat,
     title: 'Abeats',
-    ctaLink: 'https://twitter.com/AbeatsGames',
-    ctaText: 'Learn More',
+    ctaLink: 'https://abeats.com/hero',
+    ctaText: 'Play Game',
   },
   {
     imageSrc: Ikonic,
     title: 'Ikonic',
-    ctaLink: 'https://youtu.be/wrSLZypDFrg',
-    ctaText: 'Learn More',
+    ctaLink: 'https://www.ikonic.gg/',
+    ctaText: 'View Game',
   },
   {
     imageSrc: MetaShooter,
     title: 'Meta Shooter',
-    ctaLink: 'https://youtu.be/ZwC9Ux0vLy8',
-    ctaText: 'Learn More',
+    ctaLink: 'https://hunter.metashooter.gg/download-game',
+    ctaText: 'Play Game',
+  },
+  {
+    imageSrc: BlackwaterThumbnail,
+    title: 'Castle of Blackwater',
+    ctaLink: 'https://www.castleofblackwater.com/',
+    ctaText: 'View Game',
+  },
+  {
+    imageSrc: Ookeenga,
+    title: 'Ookeenga',
+    ctaLink: 'https://ookeenga.com/',
+    ctaText: 'View Game',
+  },
+  {
+    imageSrc: Revoland,
+    title: 'Revoland',
+    ctaLink: 'https://beta.revoland.com/',
+    ctaText: 'Play Game',
+  },
+  {
+    imageSrc: Thumbnail_Pixel_Hub,
+    title: 'Pixel Hub',
+    ctaLink: 'https://pixelhub.finance/game/',
+    ctaText: 'Play Game',
+  },
+  {
+    imageSrc: Thumbnail_TauntBattleworld,
+    title: 'Taunt Battleworld',
+    ctaLink: 'https://www.playtaunt.io/',
+    ctaText: 'Play Game',
   },
 ];

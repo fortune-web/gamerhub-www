@@ -78,4 +78,8 @@ export const RootRoutes = {
     url: '/token-sale',
     title: 'Token Sale',
   },
+  main: {
+    url: '/main',
+    title: 'Main Application',
+  },
 };
