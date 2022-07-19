@@ -16,8 +16,10 @@
   background: #0a1f5c;
   border-radius: 5px;
   padding: 12px 24px;
+  color: #eff1f6;
   @apply w-full;
 }
+
 .img {
   position: absolute;
   right: 20px;
@@ -32,8 +34,8 @@
 .signup_check {
   @apply mt-8 font-normal text-white break-words;
 }
-.signup_check span {
-  @apply text-primary-main px-1.5;
+.signup_check_a {
+  @apply font-normal text-primary-main px-1.5;
 }
 .checkbox {
   accent-color: #d7007b;

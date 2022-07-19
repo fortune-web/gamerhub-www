@@ -53,10 +53,15 @@ const Signup: React.FC = () => {
           type="checkbox"
           className={classNames('body2', styles.checkbox)}
         ></input>
-        <h1 className={styles.signup_check}>
-          I agree to Gamerhub's<span>Terms and Conditions</span>
+        <h1 className={classNames('body2', styles.signup_check)}>
+          I agree to Gamerhub's
+          <a href="#" className={classNames('body2', styles.signup_check_a)}>
+            Terms and Conditions
+          </a>
           {`&`}
-          <span>Privacy Policy</span>
+          <a href="#" className={classNames('body2', styles.signup_check_a)}>
+            Privacy Policy
+          </a>
         </h1>
       </div>
     </div>

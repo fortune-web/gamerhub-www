@@ -49,7 +49,10 @@ const Signin: React.FC = () => {
         </div>
       </div>
       <h1 className={classNames('body1', styles.signin_check)}>
-        Don't have an account? <span>Create an Account</span>
+        Don't have an account?
+        <a href="#" className={classNames('body1', styles.signin_check_a)}>
+          Create an Account
+        </a>
       </h1>
     </div>
   );

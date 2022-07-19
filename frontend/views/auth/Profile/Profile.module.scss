@@ -6,10 +6,13 @@
   min-height: 100vh;
   margin-top: 0;
 }
-.sign_text {
-  @apply w-full text-white text-center pt-56;
+.profile_text {
+  @apply w-full text-grey-m_1 text-center font-normal pt-36;
 }
-.sign_text span {
+.profile_text_header {
+  @apply w-full text-white text-center pt-2;
+}
+.profile_text_header span {
   @apply text-primary-main pl-2.5;
 }
 .input {
@@ -19,20 +22,9 @@
   color: #eff1f6;
   @apply w-full;
 }
-.img {
-  position: absolute;
-  right: 24px;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-.signin_btn {
+
+.start_btn {
   background: #d7007b;
   border-radius: 5px;
   @apply mt-8 text-[15px] text-white py-3 w-full;
-}
-.signin_check {
-  @apply mt-8 text-[15px] text-center text-white;
-}
-.signin_check_a {
-  @apply text-[15px] text-primary-main pl-2.5;
 }
