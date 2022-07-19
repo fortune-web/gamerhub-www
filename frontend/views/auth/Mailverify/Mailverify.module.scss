@@ -1,0 +1,40 @@
+.bg {
+  background-color: #01123d;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  margin-top: 0;
+}
+.mailverify_text {
+  @apply w-full text-white text-center pt-44;
+}
+.mailverify_text span {
+  @apply text-primary-main;
+}
+.input {
+  box-sizing: border-box;
+
+  width: 72px;
+  height: 72px;
+
+  background: #061951;
+  border: 1px solid #203d93;
+  border-radius: 5px;
+}
+.img {
+  position: absolute;
+  right: 25px;
+  top: 30%;
+}
+.mail_btn {
+  background: #d7007b;
+  border-radius: 5px;
+  @apply mt-8 w-[94%] text-[15px] text-white py-3;
+}
+.mail_text {
+  @apply mt-4 font-normal text-center text-grey-m_4;
+}
+.mail_text span {
+  @apply text-primary-main ml-1.5;
+}

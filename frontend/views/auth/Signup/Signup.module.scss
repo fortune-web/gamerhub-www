@@ -1,0 +1,43 @@
+.bg {
+  background-color: #01123d;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  margin-top: 0;
+}
+.sign_text {
+  @apply w-full text-white text-center pt-56;
+}
+.sign_text span {
+  @apply text-primary-main;
+}
+.input {
+  background: #0a1f5c;
+  border-radius: 5px;
+  padding: 12px 24px;
+  @apply w-full;
+}
+.img {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.signup_btn {
+  background: #d7007b;
+  border-radius: 5px;
+  @apply mt-8 w-full text-[15px] text-white py-3;
+}
+.signup_check {
+  @apply mt-8 font-normal text-white break-words;
+}
+.signup_check span {
+  @apply text-primary-main px-1.5;
+}
+.checkbox {
+  accent-color: #d7007b;
+  width: 20px;
+  height: 20px;
+  @apply mt-8 mr-1.5;
+}
