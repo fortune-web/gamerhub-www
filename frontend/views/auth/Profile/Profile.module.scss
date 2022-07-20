@@ -28,3 +28,45 @@
   border-radius: 5px;
   @apply mt-8 text-[15px] text-white py-3 w-full;
 }
+.flags {
+  @apply mt-6;
+}
+.flags button {
+  padding: 12px;
+  background: #0a1f5c;
+  color: #9eaec7;
+  border: none;
+  @apply w-full appearance-none;
+}
+.flags ul {
+  list-style-type: none;
+  background: #0a1f5c;
+  color: #eff1f6;
+  border: none;
+  padding: 24px 19px;
+  border-radius: 5px;
+}
+.flags li {
+  list-style-type: none;
+  padding: 13px;
+  background: #0a1f5c;
+  color: #eff1f6;
+}
+.flags input {
+  background: #071640;
+  border-radius: 5px;
+  height: 48px;
+  padding: 14px 20px !important;
+  margin: 0px !important;
+}
+.flags input[type='text']:focus {
+  border: none;
+}
+.flags div {
+  background: #071640;
+  border-radius: 5px;
+  padding-top: 0px;
+}
+.flags li:hover {
+  background: #0a1f5c;
+}

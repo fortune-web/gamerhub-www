@@ -1,0 +1,19 @@
+.selectbox {
+  background: #0a1f5c;
+  border-radius: 5px;
+  padding: 12px 24px;
+  color: #9eaec7;
+  @apply w-full appearance-none;
+}
+.selectbox_item {
+  background: #0a1f5c;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 32px;
+  color: #eff1f6;
+}
+.selectbox:focus {
+  border: hidden;
+}
