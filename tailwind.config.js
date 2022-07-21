@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       colors: {
         primary: {
+          pink5: '#FFF5FB',
           pink4: '#1A000F',
           pink3: '#4D002C',
           main: '#D7007B',

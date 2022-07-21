@@ -1,11 +1,15 @@
 import { NextPageWithLayout } from '../../page';
 import MainApplicationLayout from '../../../frontend/core/frame/ui/MainApplicationLayout/MainApplicationLayout';
-import Games from '../../../frontend/views/main/Games/Games';
+import Gamerhub from '../../../frontend/views/main/Gamerhub/Gamerhub';
+import { useRouter } from 'next/router';
 
 export const GamesPage: NextPageWithLayout = () => {
+  const router = useRouter();
+  const { handle } = router.query;
+
   return (
     <div className="flex flex-col mx-auto pb-10">
-      <Games />
+      <Gamerhub handle={handle?.toString()} />
     </div>
   );
 };
