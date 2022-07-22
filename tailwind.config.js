@@ -36,6 +36,7 @@ module.exports = {
         },
         green: {
           main: '#55C388',
+          g_1: '#2BA765',
         },
         yellow: {
           main: '#EFC906',

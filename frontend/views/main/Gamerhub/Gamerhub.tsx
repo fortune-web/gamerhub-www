@@ -3,13 +3,18 @@ import { useState } from 'react';
 import styles from './Gamerhub.module.scss';
 import classNames from 'classnames';
 import beforeIcon from '../../../shared/assets/icon/beforeIcon.png';
-import contactIcon from '../../../shared/assets/icon/contactIcon.png';
+import discord from '../../../shared/assets/icon/discord.png';
+import link from '../../../shared/assets/icon/link.png';
+import twitter from '../../../shared/assets/icon/twitter.png';
+import telegram from '../../../shared/assets/icon/telegram.png';
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
 
 export interface IGamerHub {
   handle: string | undefined;
 }
 
-const tabsData = [
+export const tabsData = [
   {
     label: 'About',
     content:
@@ -55,8 +60,21 @@ const Gamerhub: React.FC<IGamerHub> = (props) => {
         </div>
       </div>
       <div className="grid grid-cols-7 gap-10 mt-8">
-        <div className="col-start-1 col-end-5">
-          <img src="/static/img/spaceship.png" className={styles.img} />
+        <div className="col-start-1 col-end-5 ">
+          <Carousel>
+            <div>
+              <img src="/static/img/spaceship.png" />
+            </div>
+            <div>
+              <img src="/static/img/tunnel.png" />
+            </div>
+            <div>
+              <img src="/static/img/hal.png" />
+            </div>
+            <div>
+              <img src="/static/img/galaxy.png" />
+            </div>
+          </Carousel>
         </div>
         <div className="col-start-5 col-end-8">
           <div className="flex justify-between">
@@ -88,7 +106,20 @@ const Gamerhub: React.FC<IGamerHub> = (props) => {
           </div>
           <div className="flex justify-between mt-3">
             <h1 className="body1 font-normal text-grey-m_2">Community</h1>
-            <Image src={contactIcon} />
+            <div>
+              <a href="#" className="mr-4">
+                <Image src={link} />
+              </a>
+              <a href="#" className="mr-4">
+                <Image src={discord} />
+              </a>
+              <a href="#" className="mr-4">
+                <Image src={telegram} />
+              </a>
+              <a href="#">
+                <Image src={twitter} />
+              </a>
+            </div>
           </div>
           <div className="flex justify-between mt-9 gap-4">
             <button className={styles.play_btn}>
