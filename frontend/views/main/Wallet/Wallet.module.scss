@@ -14,3 +14,8 @@
   width: auto;
   height: 16px;
 }
+.trx_filter_btn {
+  @apply rounded px-4 py-3 text-grey-m_3;
+  font-size: 13px;
+  background: #0b082b;
+}

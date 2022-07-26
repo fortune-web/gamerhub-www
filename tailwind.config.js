@@ -35,6 +35,7 @@ module.exports = {
           bg: '#343333',
         },
         green: {
+          1: '#2BA765',
           main: '#55C388',
           g_1: '#2BA765',
         },
