@@ -69,4 +69,9 @@ export const TeamMembers: TeamMember[] = [
     role: 'Marketing Executive',
     image: '/static/img/team/vivyn.png',
   },
+  {
+    name: 'Anita Kalergis',
+    role: 'Institutional Advisor',
+    image: '/static/img/team/anita.png',
+  },
 ];

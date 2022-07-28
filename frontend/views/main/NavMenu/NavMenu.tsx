@@ -20,7 +20,7 @@ export interface INavMenu {}
 const NavMenuItems = [
   { title: 'Home', link: '/main', icon: Home },
   { title: 'Games', link: '/main/games', icon: Gamehub },
-  { title: 'Wallet', link: '/main', icon: Wallet },
+  { title: 'Wallet', link: '/main/wallet', icon: Wallet },
   { title: 'GameFi', link: '/main', icon: GameFi },
   { title: 'NFTs', link: '/main', icon: NFTs },
   { title: 'Marketplace', link: '/main', icon: Market },

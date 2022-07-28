@@ -1,0 +1,30 @@
+.img {
+  height: auto;
+  @apply w-full;
+}
+.text {
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  @apply max-w-[605px] w-full absolute text-center;
+}
+
+.play_btn {
+  background-image: url('../../../shared/assets/icon/pinkIcon.png');
+
+  height: auto;
+  background-size: 100% 100%;
+  @apply px-20 py-6 w-full h-auto;
+}
+.heartIcon {
+  height: auto;
+  width: 93px;
+}
+.btn_border {
+  border-bottom: 1px solid rgba(93, 119, 162, 0.1);
+}
+.option {
+  background: #0b082b;
+  border-radius: 5px;
+  @apply mr-2.5  font-normal text-grey-m_3 px-4 py-2;
+}
